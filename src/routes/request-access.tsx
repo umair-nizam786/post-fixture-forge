@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
 import { Layout } from "@/components/portcall/Layout";
-import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/request-access")({
   head: () => ({
@@ -77,15 +76,19 @@ function RequestAccessPage() {
     setErrors({});
     setSubmitError(null);
     setSubmitting(true);
-    const { error } = await supabase.from("access_requests").insert({
-      name: result.data.name,
-      company: result.data.company,
-      email: result.data.email,
-      phone: result.data.phone,
-      company_type: result.data.companyType,
-    });
+    let ok = false;
+    try {
+      const res = await fetch("/api/public/access-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(result.data),
+      });
+      ok = res.ok;
+    } catch {
+      ok = false;
+    }
     setSubmitting(false);
-    if (error) {
+    if (!ok) {
       setSubmitError("Something went wrong. Please try again.");
       return;
     }
