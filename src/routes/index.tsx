@@ -110,12 +110,17 @@ function Hero() {
 /* ---------- Problem Collapse ---------- */
 function ProblemCollapse() {
   const channels = [
-    { label: "Email", kind: "Channel" },
-    { label: "WhatsApp", kind: "Channel" },
-    { label: "Calls", kind: "Channel" },
-    { label: "PDFs", kind: "Document" },
-    { label: "Spreadsheets", kind: "Data" },
+    { label: "Email", icon: "M" },
+    { label: "WhatsApp", icon: "W" },
+    { label: "Calls", icon: "C" },
+    { label: "Teams", icon: "T" },
   ];
+  const partners = [
+    { label: "Shipowner / Operator", icon: "S" },
+    { label: "Port Agent", icon: "P" },
+    { label: "Master", icon: "M" },
+  ];
+
   return (
     <section className="mx-auto max-w-7xl px-6 py-28">
       <div className="flex flex-col items-center text-center">
@@ -123,34 +128,88 @@ function ProblemCollapse() {
           The fragmentation gap
         </span>
         <h2 className="mt-4 max-w-2xl text-balance text-3xl font-bold tracking-tight text-navy md:text-4xl">
-          After the fixture, execution lives across six different apps.
+          After the fixture, execution scatters across channels and partners.
         </h2>
         <p className="mt-4 max-w-xl text-pretty text-navy/60">
-          Information scatters. Accountability blurs. Disputes find space to grow.
+          Information fragments. Accountability blurs. Disputes find space to grow.
         </p>
       </div>
 
-      <div className="mt-16 flex flex-col items-center gap-4">
-        <div className="grid w-full max-w-3xl grid-cols-2 gap-3 md:grid-cols-5">
-          {channels.map((c) => (
-            <div
-              key={c.label}
-              className="flex flex-col items-center rounded-xl border border-navy/10 bg-white p-4"
-            >
-              <span className="font-mono text-[9px] uppercase tracking-wider text-navy/40">
-                {c.kind}
-              </span>
-              <span className="mt-1 text-sm font-semibold text-navy">{c.label}</span>
+      <div className="mt-16 grid gap-8 lg:grid-cols-3 lg:items-start">
+        {/* Channels */}
+        <div className="flex flex-col gap-4">
+          <p className="text-center font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/40">
+            Channels
+          </p>
+          <div className="flex flex-col gap-3">
+            {channels.map((c) => (
+              <div
+                key={c.label}
+                className="flex items-center gap-4 rounded-xl border border-navy/10 bg-white p-4 shadow-sm"
+              >
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy/5 font-mono text-sm font-bold text-navy/70">
+                  {c.icon}
+                </span>
+                <span className="text-sm font-semibold text-navy">{c.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Center connector */}
+        <div className="relative flex flex-col items-center justify-center gap-4 py-4 lg:py-12">
+          {/* Desktop connecting lines */}
+          <div className="hidden lg:block">
+            <svg width="200" height="200" viewBox="0 0 200 200" className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-4 overflow-visible">
+              {/* Left lines from channels */}
+              <path d="M -40 30 Q 60 30 60 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
+              <path d="M -40 55 Q 60 55 60 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
+              <path d="M -40 80 Q 60 80 60 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
+              <path d="M -40 105 Q 60 105 60 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
+              {/* Right lines from partners */}
+              <path d="M 240 45 Q 140 45 140 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
+              <path d="M 240 75 Q 140 75 140 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
+              <path d="M 240 105 Q 140 105 140 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
+            </svg>
+          </div>
+
+          {/* Down arrow indicator */}
+          <div className="flex flex-col items-center gap-2">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-teal/10">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="text-teal">
+                <path d="M10 4v12m0 0l-4-4m4 4l4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
             </div>
-          ))}
+            <span className="font-mono text-[9px] uppercase tracking-wider text-teal/80">
+              Converge
+            </span>
+          </div>
         </div>
 
-        <div className="my-2 flex h-20 flex-col items-center justify-center">
-          <div className="h-full w-px bg-gradient-to-b from-navy/10 to-teal" />
-          <div className="mt-1 size-2 rounded-full bg-teal" />
+        {/* Partners */}
+        <div className="flex flex-col gap-4">
+          <p className="text-center font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/40">
+            Partners
+          </p>
+          <div className="flex flex-col gap-3">
+            {partners.map((p) => (
+              <div
+                key={p.label}
+                className="flex items-center gap-4 rounded-xl border border-navy/10 bg-white p-4 shadow-sm"
+              >
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy/5 font-mono text-sm font-bold text-navy/70">
+                  {p.icon}
+                </span>
+                <span className="text-sm font-semibold text-navy">{p.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
+      </div>
 
-        <div className="w-full max-w-3xl rounded-2xl bg-navy p-8 text-center text-cloud ring-8 ring-teal/10">
+      {/* Solution */}
+      <div className="mt-12 flex justify-center">
+        <div className="w-full max-w-2xl rounded-2xl bg-navy p-8 text-center text-cloud ring-8 ring-teal/10">
           <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-teal">
             Portcall
           </p>
