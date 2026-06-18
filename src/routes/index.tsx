@@ -505,11 +505,10 @@ function TrustRow() {
     { kicker: "Security", value: "Enterprise-grade encryption" },
     { kicker: "Architecture", value: "API-first platform" },
     { kicker: "Integrations", value: "Maritime systems ready" },
-    { kicker: "Reach", value: "Global scalability" },
   ];
   return (
     <section className="border-y border-navy/5 bg-white px-6 py-14">
-      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
+      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-3">
         {items.map((i) => (
           <div key={i.kicker}>
             <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/40">
