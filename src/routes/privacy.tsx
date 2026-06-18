@@ -35,6 +35,12 @@ function PrivacyPage() {
         <p className="mt-5 text-pretty text-lg text-navy/70">
           Coming soon.
         </p>
+        <Link
+          to="/request-access"
+          className="mt-8 rounded-full bg-navy px-5 py-2.5 text-xs font-semibold text-cloud transition-colors hover:bg-slate"
+        >
+          REQUEST EARLY ACCESS
+        </Link>
       </section>
     </Layout>
   );
