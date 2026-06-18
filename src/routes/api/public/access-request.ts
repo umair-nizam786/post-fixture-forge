@@ -57,28 +57,36 @@ export const Route = createFileRoute('/api/public/access-request')({
           return Response.json({ error: 'Could not save request' }, { status: 500 })
         }
 
-        // 2) Enqueue notification email (non-fatal on failure)
+        // 2) Render + enqueue notification email via the transactional send route
+        //    (non-fatal on failure so the form still succeeds).
         const idempotencyKey = `access-request-${inserted?.id ?? crypto.randomUUID()}`
-        const { error: enqueueError } = await supabase.rpc('enqueue_email', {
-          p_queue_name: 'transactional_emails',
-          p_message: {
-            template_name: 'access-request',
-            recipient_email: NOTIFY_TO,
-            idempotency_key: idempotencyKey,
-            reply_to: data.email,
-            template_data: {
-              name: data.name,
-              company: data.company,
-              email: data.email,
-              phone: data.phone,
-              companyType: data.companyType,
-              submittedAt: inserted?.created_at ?? new Date().toISOString(),
+        try {
+          const origin = new URL(request.url).origin
+          const sendRes = await fetch(`${origin}/lovable/email/transactional/send`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${serviceKey}`,
             },
-          },
-        })
-
-        if (enqueueError) {
-          console.warn('Failed to enqueue access-request email', enqueueError)
+            body: JSON.stringify({
+              templateName: 'access-request',
+              recipientEmail: NOTIFY_TO,
+              idempotencyKey,
+              templateData: {
+                name: data.name,
+                company: data.company,
+                email: data.email,
+                phone: data.phone,
+                companyType: data.companyType,
+                submittedAt: inserted?.created_at ?? new Date().toISOString(),
+              },
+            }),
+          })
+          if (!sendRes.ok) {
+            console.warn('access-request email send failed', sendRes.status, await sendRes.text())
+          }
+        } catch (err) {
+          console.warn('access-request email send threw', err)
         }
 
         return Response.json({ ok: true })
