@@ -86,7 +86,7 @@ function EventRow({
   stamp,
   badge,
 }: {
-  color: "teal" | "signal" | "navy";
+  color: "teal" | "signal" | "navy" | "red";
   title: string;
   meta: string;
   stamp: string;
