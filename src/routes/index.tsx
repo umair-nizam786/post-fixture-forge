@@ -48,12 +48,11 @@ function Hero() {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1">
             <span className="size-1.5 rounded-full bg-teal pc-pulse-soft" />
             <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-cloud/70">
-              Post-Fixture Execution Layer
+              UNIFIED VOYAGE RECORD SYSTEM
             </span>
           </div>
           <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl lg:text-6xl">
-            Mission control for{" "}
-            <span className="text-teal">post-fixture</span> maritime execution.
+            End voyage disputes with single, trusted record.
           </h1>
           <p className="mt-8 max-w-md text-pretty text-lg text-cloud/70 whitespace-pre-line">
             Connect every voyage, counterparties, and operational events in one shared workspace.{"\u00a0"}{"\n"}
