@@ -423,7 +423,7 @@ function Row({
 }) {
   return (
     <div className="flex items-center justify-between text-sm">
-      <span className="text-cloud/60">{label}</span>
+      <span className="text-cloud/60 flex flex-col">{label}</span>
       <span
         className={`font-mono text-[11px] uppercase tracking-wider ${
           accent ? "text-teal" : "text-cloud"
