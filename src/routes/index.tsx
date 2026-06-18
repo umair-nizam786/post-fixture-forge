@@ -253,7 +253,7 @@ function ProductGrid() {
                   }`}
                 />
               </div>
-              <h3 className="text-lg font-bold tracking-tight text-navy">{f.title}</h3>
+              <h3 className="text-lg font-bold tracking-tight text-navy whitespace-pre-line">{f.title}</h3>
               <p className="text-sm leading-relaxed text-navy/60">{f.body}</p>
             </div>
           ))}
