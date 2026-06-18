@@ -23,7 +23,7 @@ export const Route = createFileRoute("/charterers")({
     <PersonaPage
       kicker="Charterer"
       headline="Stay aligned. Stop chasing updates."
-      sub="Access a shared voyage timeline that captures what happened, when it happened, and why — through your operating partners, at no cost to you."
+      sub="Access a shared voyage timeline that captures what happened, when it happened, and why; through your operating partners, at no cost to you."
       bullets={[
         {
           title: "Real-time voyage visibility",
@@ -33,18 +33,18 @@ export const Route = createFileRoute("/charterers")({
         {
           title: "Shared timeline of events",
           body:
-            "One source of truth for milestones, documents, and operational notes across every voyage.",
+            "One source of truth for milestones, documents, and operational notes across every voyage.\u00a0",
         },
         {
           title: "Easier collaboration",
           body:
-            "Communicate with operators in context — against the voyage, against the event, against the record.",
+            "Communicate with operators in context; against the voyage, against the event, against the record.",
         },
       ]}
       commercial={{
         title: "Free for charterers. Always.",
         body:
-          "Charterers receive collaboration access through participating operators at no cost. The platform improves the relationship — it doesn't add another line item to it.",
+          "Charterers receive collaboration access through participating operators at no cost. The platform improves the relationship; it doesn't add another line item to it.",
       }}
       ctaPrimary={{ label: "Preview the voyage experience", to: "/request-access" }}
       ctaSecondary={{ label: "See how it works", to: "/pricing" }}
