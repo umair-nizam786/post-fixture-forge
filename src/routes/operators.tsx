@@ -13,7 +13,7 @@ export const Route = createFileRoute("/operators")({
       { property: "og:title", content: "Portcall for Shipowners & Operators" },
       {
         property: "og:description",
-        content: "Help your team become easier to work with.",
+        content: "Delight your customer experience.",
       },
       { property: "og:url", content: "/operators" },
     ],
@@ -22,8 +22,8 @@ export const Route = createFileRoute("/operators")({
   component: () => (
     <PersonaPage
       kicker="Shipowner / Operator"
-      headline="Help your team become easier to work with."
-      sub="Deliver a transparent, shared execution experience for every charterer. Reduce manual follow-ups and maintain a reliable record of voyage events — without adding operational complexity."
+      headline="Delight your customer experience."
+      sub="Deliver a transparent, shared execution experience for every charterer. Reduce manual follow-ups and maintain a reliable record of voyage events."
       bullets={[
         {
           title: "Better charterer experience",
