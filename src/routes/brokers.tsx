@@ -26,9 +26,9 @@ export const Route = createFileRoute("/brokers")({
       sub="Maintain stronger alignment between commercial parties through a shared execution workflow. Your insight empowers the fixture."
       bullets={[
         {
-          title: "Post-fixture visibility",
+          title: "Post-fixture control",
           body:
-            "Stay aware of voyage progress, key milestones, and operational events for the fixtures you've placed.",
+            "Stay in control of voyage progress, key milestones, and operational events for your fixtures.",
         },
         {
           title: "Better communication",
@@ -44,7 +44,7 @@ export const Route = createFileRoute("/brokers")({
       commercial={{
         title: "Collaboration access at no cost.",
         body:
-          "Brokers join voyage workspaces as collaborators — no seat fees, no per-voyage charges.",
+          "Brokers join voyage workspaces as collaborators; no seat fees, no per-voyage charges.",
       }}
       ctaPrimary={{ label: "See the workflow", to: "/request-access" }}
       ctaSecondary={{ label: "View pricing", to: "/pricing" }}
