@@ -64,7 +64,7 @@ function Hero() {
               to="/request-access"
               className="group inline-flex items-center gap-2 rounded-lg bg-signal px-5 py-3.5 text-sm font-semibold text-cloud transition-colors hover:bg-signal/90"
             >
-              Request early access
+              TRY THE PLATFORM
               <span className="transition-transform group-hover:translate-x-0.5">→</span>
             </Link>
             <a
@@ -99,8 +99,8 @@ function Hero() {
           style={{ animationDelay: "180ms" }}
         >
           <VoyageWorkspace />
-          <p className="mt-6 max-w-md font-mono text-[10px] uppercase tracking-[0.2em] text-navy/40">
-            Live voyage workspace · shared between owner, charterer, and broker
+          <p className="mt-6 max-w-md font-mono text-[10px] uppercase tracking-[0.2em] text-navy/40 whitespace-pre-line">
+            LIVE VOYAGE WORKSPACE{"\n"}SHARED BETWEEN OWNER, CHARTERER, AND BROKER
           </p>
         </div>
       </div>
@@ -186,21 +186,21 @@ function ProductGrid() {
     },
     {
       kicker: "03",
-      title: "Charterer collaboration",
+      title: "Charterer & broker collaboration",
       body:
         "Give customers visibility without constant follow-ups. Charterers see what they need, when they need it.",
       accent: "teal",
     },
     {
       kicker: "04",
-      title: "AI intelligence",
+      title: "AI-powered analytics",
       body:
         "Detect missing updates, summarise voyage status, surface risks, and extract data from operational documents.",
       accent: "signal",
     },
     {
       kicker: "05",
-      title: "Claims readiness",
+      title: "\n\nClaims-ready records",
       body:
         "Build a clearer evidence trail as the voyage unfolds. Support faster resolution when questions arise.",
       accent: "navy",
@@ -253,7 +253,7 @@ function ProductGrid() {
                   }`}
                 />
               </div>
-              <h3 className="text-lg font-bold tracking-tight text-navy">{f.title}</h3>
+              <h3 className="text-lg font-bold tracking-tight text-navy whitespace-pre-line">{f.title}</h3>
               <p className="text-sm leading-relaxed text-navy/60">{f.body}</p>
             </div>
           ))}
@@ -285,7 +285,7 @@ const personaContent: Record<
     bullets: [
       "Structured voyage visibility for your charterers",
       "Automated event summaries from operational data",
-      "Stronger evidence trail for claims readiness",
+      "\n\nClaims-ready records",
     ],
     pricing: "Simple voyage-based pricing. From $479 per voyage.",
     cta: { label: "Improve voyage execution", to: "/operators" },
@@ -366,7 +366,7 @@ function PersonaTabs() {
             <p className="mt-5 max-w-lg text-cloud/70">{p.body}</p>
             <ul className="mt-8 space-y-3">
               {p.bullets.map((b) => (
-                <li key={b} className="flex items-start gap-3 text-sm text-cloud/85">
+                <li key={b} className="flex items-start gap-3 text-sm text-cloud/85 whitespace-pre-line">
                   <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-teal" />
                   {b}
                 </li>
@@ -398,7 +398,7 @@ function PersonaTabs() {
               <Row label="Voyage workspace" value="Included" />
               <Row label="Timeline intelligence" value="Included" />
               <Row label="AI insights" value="Included" />
-              <Row label="Claims-ready records" value="Included" />
+              <Row label={<span className="whitespace-pre-line">{"\n\n"}Claims-ready records</span>} value="Included" />
               <Row
                 label="Collaborator seats"
                 value="Unlimited"
@@ -417,13 +417,13 @@ function Row({
   value,
   accent,
 }: {
-  label: string;
+  label: React.ReactNode;
   value: string;
   accent?: boolean;
 }) {
   return (
     <div className="flex items-center justify-between text-sm">
-      <span className="text-cloud/60">{label}</span>
+      <span className="text-cloud/60 flex flex-col">{label}</span>
       <span
         className={`font-mono text-[11px] uppercase tracking-wider ${
           accent ? "text-teal" : "text-cloud"
@@ -469,12 +469,12 @@ function PricingTeaser() {
             <ul className="mt-8 space-y-3 text-sm">
               {[
                 "Voyage workspace & timeline",
-                "Charterer collaboration",
+                "Charterer & broker collaboration",
                 "Document management",
-                "AI-powered insights",
-                "Claims-ready records",
+                "AI-powered analytics",
+                "\n\nClaims-ready records",
               ].map((b) => (
-                <li key={b} className="flex items-center gap-3">
+                <li key={b} className="flex items-center gap-3 whitespace-pre-line">
                   <span className="size-1.5 rounded-full bg-teal" />
                   {b}
                 </li>
@@ -490,7 +490,7 @@ function PricingTeaser() {
 
           <article className="rounded-2xl border border-navy/10 bg-cloud p-8">
             <span className="rounded bg-teal/10 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-teal">
-              Try the platform
+              TRY THE PLATFORM
             </span>
             <div className="mt-4 flex items-baseline gap-1.5">
               <span className="text-5xl font-extrabold tracking-tight">Free</span>
@@ -569,7 +569,7 @@ function FinalCTA() {
             to="/request-access"
             className="rounded-xl bg-signal px-7 py-4 text-sm font-semibold text-cloud transition-transform hover:scale-[1.02]"
           >
-            Request early access
+            TRY THE PLATFORM
           </Link>
           <Link
             to="/request-access"
