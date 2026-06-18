@@ -9,12 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as RequestAccessRouteImport } from './routes/request-access'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as OperatorsRouteImport } from './routes/operators'
 import { Route as CharterersRouteImport } from './routes/charterers'
 import { Route as BrokersRouteImport } from './routes/brokers'
 import { Route as IndexRouteImport } from './routes/index'
 
+const RequestAccessRoute = RequestAccessRouteImport.update({
+  id: '/request-access',
+  path: '/request-access',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PricingRoute = PricingRouteImport.update({
   id: '/pricing',
   path: '/pricing',
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/charterers': typeof CharterersRoute
   '/operators': typeof OperatorsRoute
   '/pricing': typeof PricingRoute
+  '/request-access': typeof RequestAccessRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/charterers': typeof CharterersRoute
   '/operators': typeof OperatorsRoute
   '/pricing': typeof PricingRoute
+  '/request-access': typeof RequestAccessRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +70,33 @@ export interface FileRoutesById {
   '/charterers': typeof CharterersRoute
   '/operators': typeof OperatorsRoute
   '/pricing': typeof PricingRoute
+  '/request-access': typeof RequestAccessRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/brokers' | '/charterers' | '/operators' | '/pricing'
+  fullPaths:
+    | '/'
+    | '/brokers'
+    | '/charterers'
+    | '/operators'
+    | '/pricing'
+    | '/request-access'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/brokers' | '/charterers' | '/operators' | '/pricing'
-  id: '__root__' | '/' | '/brokers' | '/charterers' | '/operators' | '/pricing'
+  to:
+    | '/'
+    | '/brokers'
+    | '/charterers'
+    | '/operators'
+    | '/pricing'
+    | '/request-access'
+  id:
+    | '__root__'
+    | '/'
+    | '/brokers'
+    | '/charterers'
+    | '/operators'
+    | '/pricing'
+    | '/request-access'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,10 +105,18 @@ export interface RootRouteChildren {
   CharterersRoute: typeof CharterersRoute
   OperatorsRoute: typeof OperatorsRoute
   PricingRoute: typeof PricingRoute
+  RequestAccessRoute: typeof RequestAccessRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/request-access': {
+      id: '/request-access'
+      path: '/request-access'
+      fullPath: '/request-access'
+      preLoaderRoute: typeof RequestAccessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/pricing': {
       id: '/pricing'
       path: '/pricing'
@@ -125,6 +161,7 @@ const rootRouteChildren: RootRouteChildren = {
   CharterersRoute: CharterersRoute,
   OperatorsRoute: OperatorsRoute,
   PricingRoute: PricingRoute,
+  RequestAccessRoute: RequestAccessRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
