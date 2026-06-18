@@ -189,7 +189,7 @@ function ProblemCollapse() {
           <p className="text-center font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/40">
             Documents
           </p>
-          <div className="flex flex-wrap justify-center gap- setVisible md:flex-col md:items-stretch">
+          <div className="flex flex-wrap justify-center gap-2 md:flex-col md:items-stretch">
             {documents.map((d) => (
               <div
                 key={d.label}
