@@ -114,7 +114,7 @@ function ProblemCollapse() {
           After the fixture, execution scatters across channels and partners.
         </h2>
         <p className="mt-4 max-w-xl text-pretty text-navy/60">
-          Information fragments. Accountability blurs. Disputes find space to grow.
+          See accurate operational updates as they happen, not days later through a forwarded email thread. Get notified on WhatsApp.
         </p>
       </div>
 
@@ -202,7 +202,7 @@ function ProblemCollapse() {
               One shared voyage execution workspace.
             </p>
             <p className="mx-auto mt-4 max-w-lg text-pretty text-base text-cloud/60">
-              Every event, timestamped and visible to every party. No more chasing threads across four apps and four partners.
+              Communicate with operators in context; against the voyage, against the event, against the record.
             </p>
 
             {/* No-brainer value props */}
