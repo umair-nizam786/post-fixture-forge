@@ -64,7 +64,7 @@ function Hero() {
               to="/request-access"
               className="group inline-flex items-center gap-2 rounded-lg bg-signal px-5 py-3.5 text-sm font-semibold text-cloud transition-colors hover:bg-signal/90"
             >
-              Request early access
+              TRY THE PLATFORM
               <span className="transition-transform group-hover:translate-x-0.5">→</span>
             </Link>
             <a
