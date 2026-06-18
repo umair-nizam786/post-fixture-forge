@@ -503,7 +503,7 @@ function Row({
 function TrustRow() {
   const items = [
     { kicker: "Security", value: "Enterprise-grade encryption" },
-    { kicker: "Architecture", value: "API-first platform" },
+    { kicker: "Architecture", value: "MCP & API-first platform" },
     { kicker: "Integrations", value: "Maritime systems ready" },
   ];
   return (
