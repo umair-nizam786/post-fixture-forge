@@ -59,12 +59,14 @@ export function VoyageWorkspace() {
             title="Statement of facts shared with charterer"
             meta="Auto-summary · 3 events"
             stamp="08:02 LT"
+            date="18 Jun"
           />
           <EventRow
             color="teal"
             title="NOR tendered"
             meta="Capt. Aris · Berth 4"
             stamp="14:20 LT"
+            date="17 Jun"
             badge="Verified"
           />
           <EventRow
@@ -72,6 +74,7 @@ export function VoyageWorkspace() {
             title="Berthing delay due to crane failure"
             meta="2 out of 4 cranes down"
             stamp="19:41 LT"
+            date="17 Jun"
           />
         </div>
       </div>
