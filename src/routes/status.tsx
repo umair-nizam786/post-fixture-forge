@@ -1,0 +1,41 @@
+import { createFileRoute } from "@tanstack/react-router";
+import { Layout } from "@/components/portcall/Layout";
+
+export const Route = createFileRoute("/status")({
+  head: () => ({
+    meta: [
+      { title: "Status — Portcall" },
+      {
+        name: "description",
+        content:
+          "System status for Portcall.",
+      },
+      { property: "og:title", content: "Status — Portcall" },
+      {
+        property: "og:description",
+        content: "System status for Portcall.",
+      },
+      { property: "og:url", content: "/status" },
+    ],
+    links: [{ rel: "canonical", href: "/status" }],
+  }),
+  component: StatusPage,
+});
+
+function StatusPage() {
+  return (
+    <Layout>
+      <section className="flex flex-col items-center justify-center px-6 py-32 text-center">
+        <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-teal">
+          Trust
+        </p>
+        <h1 className="mt-3 text-balance text-4xl font-extrabold tracking-tight md:text-5xl">
+          Status
+        </h1>
+        <p className="mt-5 text-pretty text-lg text-navy/70">
+          Coming soon.
+        </p>
+      </section>
+    </Layout>
+  );
+}
