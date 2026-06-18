@@ -472,9 +472,9 @@ function PricingTeaser() {
                 "Charterer & broker collaboration",
                 "Document management",
                 "AI-powered analytics",
-                "Claims-ready records",
+                "\n\nClaims-ready records",
               ].map((b) => (
-                <li key={b} className="flex items-center gap-3">
+                <li key={b} className="flex items-center gap-3 whitespace-pre-line">
                   <span className="size-1.5 rounded-full bg-teal" />
                   {b}
                 </li>
