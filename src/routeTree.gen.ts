@@ -9,16 +9,34 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as StatusRouteImport } from './routes/status'
+import { Route as SecurityRouteImport } from './routes/security'
 import { Route as RequestAccessRouteImport } from './routes/request-access'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as OperatorsRouteImport } from './routes/operators'
 import { Route as CharterersRouteImport } from './routes/charterers'
 import { Route as BrokersRouteImport } from './routes/brokers'
 import { Route as IndexRouteImport } from './routes/index'
 
+const StatusRoute = StatusRouteImport.update({
+  id: '/status',
+  path: '/status',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SecurityRoute = SecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RequestAccessRoute = RequestAccessRouteImport.update({
   id: '/request-access',
   path: '/request-access',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PricingRoute = PricingRouteImport.update({
@@ -53,7 +71,10 @@ export interface FileRoutesByFullPath {
   '/charterers': typeof CharterersRoute
   '/operators': typeof OperatorsRoute
   '/pricing': typeof PricingRoute
+  '/privacy': typeof PrivacyRoute
   '/request-access': typeof RequestAccessRoute
+  '/security': typeof SecurityRoute
+  '/status': typeof StatusRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -61,7 +82,10 @@ export interface FileRoutesByTo {
   '/charterers': typeof CharterersRoute
   '/operators': typeof OperatorsRoute
   '/pricing': typeof PricingRoute
+  '/privacy': typeof PrivacyRoute
   '/request-access': typeof RequestAccessRoute
+  '/security': typeof SecurityRoute
+  '/status': typeof StatusRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -70,7 +94,10 @@ export interface FileRoutesById {
   '/charterers': typeof CharterersRoute
   '/operators': typeof OperatorsRoute
   '/pricing': typeof PricingRoute
+  '/privacy': typeof PrivacyRoute
   '/request-access': typeof RequestAccessRoute
+  '/security': typeof SecurityRoute
+  '/status': typeof StatusRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -80,7 +107,10 @@ export interface FileRouteTypes {
     | '/charterers'
     | '/operators'
     | '/pricing'
+    | '/privacy'
     | '/request-access'
+    | '/security'
+    | '/status'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -88,7 +118,10 @@ export interface FileRouteTypes {
     | '/charterers'
     | '/operators'
     | '/pricing'
+    | '/privacy'
     | '/request-access'
+    | '/security'
+    | '/status'
   id:
     | '__root__'
     | '/'
@@ -96,7 +129,10 @@ export interface FileRouteTypes {
     | '/charterers'
     | '/operators'
     | '/pricing'
+    | '/privacy'
     | '/request-access'
+    | '/security'
+    | '/status'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -105,16 +141,40 @@ export interface RootRouteChildren {
   CharterersRoute: typeof CharterersRoute
   OperatorsRoute: typeof OperatorsRoute
   PricingRoute: typeof PricingRoute
+  PrivacyRoute: typeof PrivacyRoute
   RequestAccessRoute: typeof RequestAccessRoute
+  SecurityRoute: typeof SecurityRoute
+  StatusRoute: typeof StatusRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/status': {
+      id: '/status'
+      path: '/status'
+      fullPath: '/status'
+      preLoaderRoute: typeof StatusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/security': {
+      id: '/security'
+      path: '/security'
+      fullPath: '/security'
+      preLoaderRoute: typeof SecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/request-access': {
       id: '/request-access'
       path: '/request-access'
       fullPath: '/request-access'
       preLoaderRoute: typeof RequestAccessRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing': {
@@ -161,7 +221,10 @@ const rootRouteChildren: RootRouteChildren = {
   CharterersRoute: CharterersRoute,
   OperatorsRoute: OperatorsRoute,
   PricingRoute: PricingRoute,
+  PrivacyRoute: PrivacyRoute,
   RequestAccessRoute: RequestAccessRoute,
+  SecurityRoute: SecurityRoute,
+  StatusRoute: StatusRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

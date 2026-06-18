@@ -35,9 +35,9 @@ export function Footer() {
             <FooterCol
               title="Trust"
               links={[
-                { to: "/", label: "Security" },
-                { to: "/", label: "Privacy" },
-                { to: "/", label: "Status" },
+                { to: "/security", label: "Security" },
+                { to: "/privacy", label: "Privacy" },
+                { to: "/status", label: "Status" },
               ]}
             />
           </div>
