@@ -9,7 +9,7 @@ export function VoyageWorkspace() {
             <span className="size-2.5 rounded-full border border-emerald-400/40 bg-emerald-400/20" />
           </div>
           <span className="font-mono text-[10px] font-medium uppercase tracking-[0.18em] text-navy/40">
-            Workspace · VYG-7742 · M/T ATLANTIC STAR
+            WORKSPACE · VOY-7742 · M/T ATLANTIC STAR
           </span>
         </div>
         <span className="rounded bg-teal/10 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-teal">
