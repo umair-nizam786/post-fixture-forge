@@ -75,12 +75,14 @@ function PricingPage() {
 
             <MoreFeatures />
 
-            <Link
-              to="/request-access"
+            <a
+              href="https://buy.stripe.com/00wcN4gTr3Dt4Co6YE5Vu00"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-10 block rounded-xl bg-navy py-3.5 text-center text-sm font-semibold text-cloud hover:bg-slate"
             >
               Launch your voyage
-            </Link>
+            </a>
           </article>
 
           <article className="rounded-2xl border border-navy/10 bg-cloud p-10">
