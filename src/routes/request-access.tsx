@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
 import { Layout } from "@/components/portcall/Layout";
+import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/request-access")({
   head: () => ({
@@ -55,12 +56,14 @@ function RequestAccessPage() {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   function update<K extends keyof FormState>(k: K, v: FormState[K]) {
     setForm((f) => ({ ...f, [k]: v }));
   }
 
-  function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     const result = schema.safeParse(form);
     if (!result.success) {
@@ -72,7 +75,22 @@ function RequestAccessPage() {
       return;
     }
     setErrors({});
+    setSubmitError(null);
+    setSubmitting(true);
+    const { error } = await supabase.from("access_requests").insert({
+      name: result.data.name,
+      company: result.data.company,
+      email: result.data.email,
+      phone: result.data.phone,
+      company_type: result.data.companyType,
+    });
+    setSubmitting(false);
+    if (error) {
+      setSubmitError("Something went wrong. Please try again.");
+      return;
+    }
     setSubmitted(true);
+    window.open("https://calendly.com/umair-portcall/30min", "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -154,14 +172,16 @@ function RequestAccessPage() {
                 </div>
               </div>
 
-              <a
-                href="https://calendly.com/umair-portcall/30min"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-8 block w-full rounded-xl bg-navy py-4 text-center text-sm font-semibold text-cloud transition-colors hover:bg-slate"
+              <button
+                type="submit"
+                disabled={submitting}
+                className="mt-8 block w-full rounded-xl bg-navy py-4 text-center text-sm font-semibold text-cloud transition-colors hover:bg-slate disabled:opacity-60"
               >
-                Let's speak!
-              </a>
+                {submitting ? "Sending…" : "Let's speak!"}
+              </button>
+              {submitError ? (
+                <p className="mt-3 text-center text-xs text-red-600">{submitError}</p>
+              ) : null}
               <p className="mt-3 text-center text-xs text-navy/50">
                 By submitting, you agree to be contacted about Portcall early access.
               </p>
