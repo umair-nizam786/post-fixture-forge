@@ -158,7 +158,7 @@ function RequestAccessPage() {
                 type="submit"
                 className="mt-8 w-full rounded-xl bg-navy py-4 text-sm font-semibold text-cloud transition-colors hover:bg-slate"
               >
-                Start your free experience
+                Let's speak!
               </button>
               <p className="mt-3 text-center text-xs text-navy/50">
                 By submitting, you agree to be contacted about Portcall early access.
