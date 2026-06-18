@@ -202,7 +202,7 @@ function ProblemCollapse() {
               One shared voyage execution workspace.
             </p>
             <p className="mx-auto mt-4 max-w-lg text-pretty text-base text-cloud/60">
-              Every event, timestamped and visible to every party. No more chasing threads across four apps and four partners.
+              Communicate with operators in context; against the voyage, against the event, against the record.
             </p>
 
             {/* No-brainer value props */}
