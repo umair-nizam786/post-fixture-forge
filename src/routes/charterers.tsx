@@ -33,7 +33,7 @@ export const Route = createFileRoute("/charterers")({
         {
           title: "Shared timeline of events",
           body:
-            "One source of truth for milestones, documents, and operational notes across every voyage.",
+            "One source of truth for milestones, documents, and operational notes across every voyage.\u00a0",
         },
         {
           title: "Easier collaboration",
