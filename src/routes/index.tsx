@@ -469,9 +469,9 @@ function PricingTeaser() {
             <ul className="mt-8 space-y-3 text-sm">
               {[
                 "Voyage workspace & timeline",
-                "Charterer collaboration",
+                "Charterer & broker collaboration",
                 "Document management",
-                "AI-powered insights",
+                "AI-powered analytics",
                 "Claims-ready records",
               ].map((b) => (
                 <li key={b} className="flex items-center gap-3">
