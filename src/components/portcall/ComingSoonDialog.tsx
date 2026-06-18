@@ -19,7 +19,7 @@ export function ComingSoonDialog({
         <DialogHeader>
           <DialogTitle>Coming soon</DialogTitle>
           <DialogDescription>
-            This feature will be available soon.
+            We are launching soon!&nbsp;
           </DialogDescription>
         </DialogHeader>
       </DialogContent>
