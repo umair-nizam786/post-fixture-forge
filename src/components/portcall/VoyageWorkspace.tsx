@@ -57,7 +57,7 @@ export function VoyageWorkspace() {
           <EventRow
             color="navy"
             title="Statement of facts shared with charterer"
-            meta="Auto-summary · 3 events"
+            meta="Load Port SOF shared with charterer"
             stamp="08:02 LT"
             date="18 Jun"
           />
