@@ -159,13 +159,10 @@ function ProblemCollapse() {
           <div className="flex flex-wrap justify-center gap-2 md:flex-col md:items-stretch">
             {partners.map((p) => (
               <div
-                key={p.label}
-                className="flex items-center gap-3 rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
+                key={p}
+                className="flex items-center rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-navy/5 font-mono text-sm font-bold text-navy/70">
-                  {p.icon}
-                </span>
-                <span className="text-sm font-semibold text-navy">{p.label}</span>
+                <span className="text-sm font-semibold text-navy">{p}</span>
               </div>
             ))}
           </div>
@@ -179,13 +176,10 @@ function ProblemCollapse() {
           <div className="flex flex-wrap justify-center gap-2 md:flex-col md:items-stretch">
             {documents.map((d) => (
               <div
-                key={d.label}
-                className="flex items-center gap-3 rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
+                key={d}
+                className="flex items-center rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-navy/5 font-mono text-sm font-bold text-navy/70">
-                  {d.icon}
-                </span>
-                <span className="text-sm font-semibold text-navy">{d.label}</span>
+                <span className="text-sm font-semibold text-navy">{d}</span>
               </div>
             ))}
           </div>
