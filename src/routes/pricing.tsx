@@ -122,10 +122,10 @@ function PricingPage() {
         <div className="mx-auto mt-20 max-w-5xl rounded-2xl border border-navy/10 bg-white">
           <div className="border-b border-navy/10 px-8 py-6">
             <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.25em] text-navy/40">
-              Who pays what
+              {"\n"}
             </p>
             <h2 className="mt-2 text-xl font-bold tracking-tight">
-              Pricing logic by role
+              Pricing by role
             </h2>
           </div>
           <PricingRow
