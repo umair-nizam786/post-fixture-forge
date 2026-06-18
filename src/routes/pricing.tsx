@@ -63,7 +63,7 @@ function PricingPage() {
                 "Timeline tracking",
                 "Document management",
                 "AI-powered analytics",
-                "\n\nClaims-ready records",
+                "Claims-ready records",
                 "Unlimited collaborator seats",
               ].map((b) => (
                 <li key={b} className="flex items-center gap-3 whitespace-pre-line">
