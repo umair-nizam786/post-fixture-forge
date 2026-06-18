@@ -62,8 +62,8 @@ export function VoyageWorkspace() {
             badge="Verified"
           />
           <EventRow
-            color="signal"
-            title="Bunker adjustment confirmed"
+            color="red"
+            title="Berthing delay due to crane failure"
             meta="Brokerage Ltd. · 412 MT IFO"
             stamp="09:41 UTC"
           />
@@ -86,14 +86,14 @@ function EventRow({
   stamp,
   badge,
 }: {
-  color: "teal" | "signal" | "navy";
+  color: "teal" | "signal" | "navy" | "red";
   title: string;
   meta: string;
   stamp: string;
   badge?: string;
 }) {
   const dot =
-    color === "teal" ? "bg-teal" : color === "signal" ? "bg-signal" : "bg-navy/70";
+    color === "teal" ? "bg-teal" : color === "signal" ? "bg-signal" : color === "red" ? "bg-red-500" : "bg-navy/70";
   return (
     <div className="flex items-center justify-between rounded-lg border border-navy/5 bg-navy/[0.02] px-3.5 py-2.5">
       <div className="flex items-center gap-3">
