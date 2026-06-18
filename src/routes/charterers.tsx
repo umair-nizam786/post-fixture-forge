@@ -47,7 +47,6 @@ export const Route = createFileRoute("/charterers")({
           "Charterers receive collaboration access through participating operators at no cost. The platform improves the relationship; it doesn't add another line item to it.",
       }}
       ctaPrimary={{ label: "Preview the voyage experience", to: "/request-access" }}
-      ctaSecondary={{ label: "See how it works", to: "/pricing" }}
     />
   ),
 });
