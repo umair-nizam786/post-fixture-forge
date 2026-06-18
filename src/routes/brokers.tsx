@@ -23,7 +23,7 @@ export const Route = createFileRoute("/brokers")({
     <PersonaPage
       kicker="Shipbroker"
       headline="Stay connected throughout execution."
-      sub="Maintain stronger alignment between commercial parties through a shared execution workflow. Your visibility doesn't have to end at the fixture."
+      sub="Maintain stronger alignment between commercial parties through a shared execution workflow. Your insight empowers the fixture."
       bullets={[
         {
           title: "Post-fixture visibility",

@@ -370,7 +370,7 @@ const personaContent: Record<
     kicker: "Shipbroker",
     headline: "Stay connected throughout execution.",
     body:
-      "Maintain stronger alignment between commercial parties through a shared execution workflow. Visibility doesn't end at the fixture.",
+      "Maintain stronger alignment between commercial parties through a shared execution workflow. Your insight empowers the fixture.",
     bullets: [
       "Post-fixture visibility for both counterparties",
       "Better communication during execution",
