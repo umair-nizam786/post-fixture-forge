@@ -64,7 +64,7 @@ export function VoyageWorkspace() {
           <EventRow
             color="red"
             title="Berthing delay due to crane failure"
-            meta="Brokerage Ltd. · 412 MT IFO"
+            meta="2 out of 4 cranes down"
             stamp="09:41 UTC"
           />
           <EventRow
