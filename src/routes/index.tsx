@@ -52,7 +52,8 @@ function Hero() {
             </span>
           </div>
           <h1 className="text-balance text-4xl font-extrabold leading-[1.05] tracking-tight md:text-5xl lg:text-6xl">
-            End voyage disputes with single, trusted record.
+            End voyage disputes with{" "}
+            <span className="text-teal">single, trusted record.</span>
           </h1>
           <p className="mt-8 max-w-md text-pretty text-lg text-cloud/70 whitespace-pre-line">
             Connect every voyage, counterparties, and operational events in one shared workspace.{"\u00a0"}{"\n"}
