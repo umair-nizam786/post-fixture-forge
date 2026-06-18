@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as OperatorsRouteImport } from './routes/operators'
 import { Route as CharterersRouteImport } from './routes/charterers'
+import { Route as BrokersRouteImport } from './routes/brokers'
 import { Route as IndexRouteImport } from './routes/index'
 
 const OperatorsRoute = OperatorsRouteImport.update({
@@ -23,6 +24,11 @@ const CharterersRoute = CharterersRouteImport.update({
   path: '/charterers',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BrokersRoute = BrokersRouteImport.update({
+  id: '/brokers',
+  path: '/brokers',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -31,30 +37,34 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/brokers': typeof BrokersRoute
   '/charterers': typeof CharterersRoute
   '/operators': typeof OperatorsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/brokers': typeof BrokersRoute
   '/charterers': typeof CharterersRoute
   '/operators': typeof OperatorsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/brokers': typeof BrokersRoute
   '/charterers': typeof CharterersRoute
   '/operators': typeof OperatorsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/charterers' | '/operators'
+  fullPaths: '/' | '/brokers' | '/charterers' | '/operators'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/charterers' | '/operators'
-  id: '__root__' | '/' | '/charterers' | '/operators'
+  to: '/' | '/brokers' | '/charterers' | '/operators'
+  id: '__root__' | '/' | '/brokers' | '/charterers' | '/operators'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BrokersRoute: typeof BrokersRoute
   CharterersRoute: typeof CharterersRoute
   OperatorsRoute: typeof OperatorsRoute
 }
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CharterersRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/brokers': {
+      id: '/brokers'
+      path: '/brokers'
+      fullPath: '/brokers'
+      preLoaderRoute: typeof BrokersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -87,6 +104,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BrokersRoute: BrokersRoute,
   CharterersRoute: CharterersRoute,
   OperatorsRoute: OperatorsRoute,
 }
