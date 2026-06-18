@@ -13,7 +13,7 @@ export function VoyageWorkspace() {
           </span>
         </div>
         <span className="rounded bg-teal/10 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-teal">
-          Sea Passage
+          ANCHORED AT DISCHARGE PORT
         </span>
       </div>
 
