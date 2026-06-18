@@ -398,8 +398,7 @@ function PersonaTabs() {
               <Row label="Voyage workspace" value="Included" />
               <Row label="Timeline intelligence" value="Included" />
               <Row label="AI insights" value="Included" />
-              <Row label="Claims-ready records" value="Included" />
-              <Row label="{"\n\n"}Claims-ready records" value="Included" />
+              <Row label={<span className="whitespace-pre-line">{"\n\n"}Claims-ready records</span>} value="Included" />
               <Row
                 label="Collaborator seats"
                 value="Unlimited"
