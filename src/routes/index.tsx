@@ -114,7 +114,7 @@ function ProblemCollapse() {
           After the fixture, execution scatters across channels and partners.
         </h2>
         <p className="mt-4 max-w-xl text-pretty text-navy/60">
-          Information fragments. Accountability blurs. Disputes find space to grow.
+          See accurate operational updates as they happen, not days later through a forwarded email thread. Get notified on WhatsApp.
         </p>
       </div>
 
