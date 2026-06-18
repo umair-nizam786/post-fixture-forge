@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Layout } from "@/components/portcall/Layout";
 import { VoyageWorkspace } from "@/components/portcall/VoyageWorkspace";
+import { ComingSoonDialog } from "@/components/portcall/ComingSoonDialog";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -67,12 +68,11 @@ function Hero() {
               TRY THE PLATFORM
               <span className="transition-transform group-hover:translate-x-0.5">→</span>
             </Link>
-            <a
-              href="#how-it-works"
-              className="rounded-lg border border-white/15 bg-white/5 px-5 py-3.5 text-sm font-semibold text-cloud backdrop-blur-sm transition-colors hover:bg-white/10"
-            >
-              See how it works
-            </a>
+            <ComingSoonDialog>
+              <button className="rounded-lg border border-white/15 bg-white/5 px-5 py-3.5 text-sm font-semibold text-cloud backdrop-blur-sm transition-colors hover:bg-white/10">
+                See how it works
+              </button>
+            </ComingSoonDialog>
           </div>
 
           <dl className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-8">
