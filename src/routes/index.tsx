@@ -285,7 +285,7 @@ const personaContent: Record<
     bullets: [
       "Structured voyage visibility for your charterers",
       "Automated event summaries from operational data",
-      "Stronger evidence trail for claims readiness",
+      "\n\nClaims-ready records",
     ],
     pricing: "Simple voyage-based pricing. From $479 per voyage.",
     cta: { label: "Improve voyage execution", to: "/operators" },
@@ -366,7 +366,7 @@ function PersonaTabs() {
             <p className="mt-5 max-w-lg text-cloud/70">{p.body}</p>
             <ul className="mt-8 space-y-3">
               {p.bullets.map((b) => (
-                <li key={b} className="flex items-start gap-3 text-sm text-cloud/85">
+                <li key={b} className="flex items-start gap-3 text-sm text-cloud/85 whitespace-pre-line">
                   <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-teal" />
                   {b}
                 </li>
