@@ -442,12 +442,14 @@ function PersonaTabs() {
               >
                 {p.cta.label}
               </Link>
-              <Link
-                to="/pricing"
-                className="rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-cloud hover:bg-white/10"
-              >
-                View pricing
-              </Link>
+              {active === "operator" ? (
+                <Link
+                  to="/pricing"
+                  className="rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-cloud hover:bg-white/10"
+                >
+                  View pricing
+                </Link>
+              ) : null}
             </div>
           </div>
 
