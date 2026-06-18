@@ -136,19 +136,20 @@ function ProblemCollapse() {
         </p>
       </div>
 
-      <div className="mt-16 grid gap-8 lg:grid-cols-3 lg:items-start">
+      {/* Scattered inputs */}
+      <div className="mt-16 grid gap-10 md:grid-cols-2 md:gap-12">
         {/* Channels */}
         <div className="flex flex-col gap-4">
           <p className="text-center font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/40">
             Channels
           </p>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-wrap justify-center gap-2 md:flex-col md:items-stretch">
             {channels.map((c) => (
               <div
                 key={c.label}
-                className="flex items-center gap-4 rounded-xl border border-navy/10 bg-white p-4 shadow-sm"
+                className="flex items-center gap-3 rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
               >
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy/5 font-mono text-sm font-bold text-navy/70">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-navy/5 font-mono text-sm font-bold text-navy/70">
                   {c.icon}
                 </span>
                 <span className="text-sm font-semibold text-navy">{c.label}</span>
@@ -157,49 +158,18 @@ function ProblemCollapse() {
           </div>
         </div>
 
-        {/* Center connector */}
-        <div className="relative flex flex-col items-center justify-center gap-4 py-4 lg:py-12">
-          {/* Desktop connecting lines */}
-          <div className="hidden lg:block">
-            <svg width="200" height="200" viewBox="0 0 200 200" className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-4 overflow-visible">
-              {/* Left lines from channels */}
-              <path d="M -40 30 Q 60 30 60 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
-              <path d="M -40 55 Q 60 55 60 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
-              <path d="M -40 80 Q 60 80 60 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
-              <path d="M -40 105 Q 60 105 60 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
-              {/* Right lines from partners */}
-              <path d="M 240 45 Q 140 45 140 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
-              <path d="M 240 75 Q 140 75 140 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
-              <path d="M 240 105 Q 140 105 140 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
-              <path d="M 240 135 Q 140 135 140 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
-            </svg>
-          </div>
-
-          {/* Down arrow indicator */}
-          <div className="flex flex-col items-center gap-2">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-teal/10">
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="text-teal">
-                <path d="M10 4v12m0 0l-4-4m4 4l4-4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
-            <span className="font-mono text-[9px] uppercase tracking-wider text-teal/80">
-              Converge
-            </span>
-          </div>
-        </div>
-
         {/* Partners */}
         <div className="flex flex-col gap-4">
           <p className="text-center font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/40">
             Partners
           </p>
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-wrap justify-center gap-2 md:flex-col md:items-stretch">
             {partners.map((p) => (
               <div
                 key={p.label}
-                className="flex items-center gap-4 rounded-xl border border-navy/10 bg-white p-4 shadow-sm"
+                className="flex items-center gap-3 rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
               >
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy/5 font-mono text-sm font-bold text-navy/70">
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-navy/5 font-mono text-sm font-bold text-navy/70">
                   {p.icon}
                 </span>
                 <span className="text-sm font-semibold text-navy">{p.label}</span>
@@ -209,18 +179,58 @@ function ProblemCollapse() {
         </div>
       </div>
 
+      {/* Convergence */}
+      <div className="relative my-14 flex flex-col items-center">
+        <div className="absolute inset-x-0 top-1/2 -z-10 -translate-y-1/2">
+          <div className="mx-auto h-px w-40 bg-gradient-to-r from-transparent via-teal/30 to-transparent md:w-64" />
+        </div>
+        <div className="flex h-16 w-16 items-center justify-center rounded-full bg-teal text-cloud shadow-xl shadow-teal/25 ring-4 ring-teal/10">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+            <path d="M12 5v14m0 0l-5-5m5 5l5-5" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
+        <p className="mt-4 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-teal">
+          Everything converges here
+        </p>
+      </div>
+
       {/* Solution */}
-      <div className="mt-12 flex justify-center">
-        <div className="w-full max-w-2xl rounded-2xl bg-navy p-8 text-center text-cloud ring-8 ring-teal/10">
-          <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-teal">
-            Portcall
-          </p>
-          <p className="mt-3 text-2xl font-bold tracking-tight">
-            One shared voyage execution workspace.
-          </p>
-          <p className="mt-2 text-sm text-cloud/60">
-            Every event, timestamped and visible to every party.
-          </p>
+      <div className="flex justify-center">
+        <div className="relative w-full max-w-3xl overflow-hidden rounded-2xl bg-navy p-8 text-center text-cloud md:p-14">
+          {/* ambient glow */}
+          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-teal/10 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-signal/10 blur-3xl" />
+
+          <div className="relative">
+            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-teal">
+              Portcall
+            </p>
+            <p className="mt-5 text-2xl font-bold tracking-tight md:text-4xl">
+              One shared voyage execution workspace.
+            </p>
+            <p className="mx-auto mt-4 max-w-lg text-pretty text-base text-cloud/60">
+              Every event, timestamped and visible to every party. No more chasing threads across four apps and four partners.
+            </p>
+
+            {/* No-brainer value props */}
+            <div className="mt-10 grid gap-6 border-t border-white/10 pt-10 sm:grid-cols-3">
+              {[
+                ["Single source of truth", "One timeline. Zero conflicting versions."],
+                ["Built-in accountability", "Every action timestamped and attributed."],
+                ["Shared by design", "All parties see the same record, instantly."],
+              ].map(([title, desc]) => (
+                <div key={title} className="text-center">
+                  <div className="mx-auto mb-3 flex h-10 w-10 items-center justify-center rounded-full bg-teal/15">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-teal">
+                      <path d="M3 8l3.5 3.5L13 4" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </div>
+                  <p className="text-sm font-semibold text-cloud">{title}</p>
+                  <p className="mt-1.5 text-xs leading-relaxed text-cloud/50">{desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
