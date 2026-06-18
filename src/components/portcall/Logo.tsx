@@ -8,7 +8,7 @@ export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
       <img
         src={logoAsset.url}
         alt=""
-        className="h-6 w-auto"
+        className="h-9 w-auto shrink-0"
         aria-hidden="true"
       />
       <span className={`font-sans text-[13px] font-bold uppercase tracking-[0.18em] ${text}`}>
