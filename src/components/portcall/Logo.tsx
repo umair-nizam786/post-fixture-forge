@@ -1,11 +1,11 @@
 import { Link } from "@tanstack/react-router";
 
 export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
-  const arc = tone === "dark" ? "hsl(var(--navy))" : "hsl(var(--cloud))";
-  const bg = tone === "dark" ? "hsl(var(--cloud))" : "hsl(var(--navy))";
+  const arc = tone === "dark" ? "#071A2B" : "#F8FAFC";
+  const bg = tone === "dark" ? "#F8FAFC" : "#071A2B";
   const text = tone === "dark" ? "text-navy" : "text-cloud";
-  const signal = "hsl(var(--signal))";
-  const teal = "hsl(var(--teal))";
+  const signal = "#2563EB";
+  const teal = "#14B8A6";
   return (
     <Link to="/" className="flex items-center gap-2.5" aria-label="Portcall home">
       <svg
