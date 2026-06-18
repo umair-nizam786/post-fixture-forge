@@ -59,12 +59,14 @@ export function VoyageWorkspace() {
             title="Statement of facts shared with charterer"
             meta="Auto-summary · 3 events"
             stamp="08:02 LT"
+            date="18 Jun"
           />
           <EventRow
             color="teal"
             title="NOR tendered"
             meta="Capt. Aris · Berth 4"
             stamp="14:20 LT"
+            date="17 Jun"
             badge="Verified"
           />
           <EventRow
@@ -72,6 +74,7 @@ export function VoyageWorkspace() {
             title="Berthing delay due to crane failure"
             meta="2 out of 4 cranes down"
             stamp="19:41 LT"
+            date="17 Jun"
           />
         </div>
       </div>
@@ -84,12 +87,14 @@ function EventRow({
   title,
   meta,
   stamp,
+  date,
   badge,
 }: {
   color: "teal" | "signal" | "navy" | "red";
   title: string;
   meta: string;
   stamp: string;
+  date?: string;
   badge?: string;
 }) {
   const dot =
@@ -103,15 +108,22 @@ function EventRow({
           <p className="text-[10.5px] text-navy/50">{meta}</p>
         </div>
       </div>
-      <div className="flex items-center gap-2">
-        {badge ? (
-          <span className="rounded bg-teal/10 px-1.5 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider text-teal">
-            {badge}
+      <div className="flex flex-col items-end gap-0.5">
+        <div className="flex items-center gap-2">
+          {badge ? (
+            <span className="rounded bg-teal/10 px-1.5 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider text-teal">
+              {badge}
+            </span>
+          ) : null}
+          <span className="font-mono text-[10px] uppercase tracking-wider text-navy/40">
+            {stamp}
+          </span>
+        </div>
+        {date ? (
+          <span className="font-mono text-[9px] uppercase tracking-wider text-navy/30">
+            {date}
           </span>
         ) : null}
-        <span className="font-mono text-[10px] uppercase tracking-wider text-navy/40">
-          {stamp}
-        </span>
       </div>
     </div>
   );
