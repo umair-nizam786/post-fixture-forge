@@ -38,7 +38,7 @@ export const Route = createFileRoute("/charterers")({
         {
           title: "Easier collaboration",
           body:
-            "Communicate with operators in context — against the voyage, against the event, against the record.",
+            "Communicate with operators in context; against the voyage, against the event, against the record.",
         },
       ]}
       commercial={{
