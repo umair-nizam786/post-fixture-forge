@@ -140,15 +140,12 @@ function ProblemCollapse() {
             Channels
           </p>
           <div className="flex flex-wrap justify-center gap-2 md:flex-col md:items-stretch">
-            {channels.map((c) => (
+          {channels.map((c) => (
               <div
-                key={c.label}
-                className="flex items-center gap-3 rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
+                key={c}
+                className="flex items-center rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-navy/5 font-mono text-sm font-bold text-navy/70">
-                  {c.icon}
-                </span>
-                <span className="text-sm font-semibold text-navy">{c.label}</span>
+                <span className="text-sm font-semibold text-navy">{c}</span>
               </div>
             ))}
           </div>
