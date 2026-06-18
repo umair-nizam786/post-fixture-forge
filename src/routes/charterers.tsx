@@ -23,7 +23,7 @@ export const Route = createFileRoute("/charterers")({
     <PersonaPage
       kicker="Charterer"
       headline="Stay aligned. Stop chasing updates."
-      sub="Access a shared voyage timeline that captures what happened, when it happened, and why — through your operating partners, at no cost to you."
+      sub="Access a shared voyage timeline that captures what happened, when it happened, and why; through your operating partners, at no cost to you."
       bullets={[
         {
           title: "Real-time voyage visibility",
