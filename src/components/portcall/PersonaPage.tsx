@@ -1,10 +1,11 @@
 import { Link } from "@tanstack/react-router";
+import type { ReactNode } from "react";
 import { Layout } from "./Layout";
 import { VoyageWorkspace } from "./VoyageWorkspace";
 
 export type PersonaPageProps = {
   kicker: string;
-  headline: string;
+  headline: ReactNode;
   sub: string;
   bullets: { title: string; body: string }[];
   commercial: { title: string; body: string };

@@ -22,7 +22,7 @@ export const Route = createFileRoute("/operators")({
   component: () => (
     <PersonaPage
       kicker="Shipowner / Operator"
-      headline="Delight your customer experience."
+      headline={<>Delight <span className="text-teal">your</span> customer experience.</>}
       sub="Deliver a transparent, shared execution experience for every charterer. Reduce manual follow-ups and maintain a reliable record of voyage events."
       bullets={[
         {
