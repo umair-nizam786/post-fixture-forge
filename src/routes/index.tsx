@@ -121,6 +121,12 @@ function ProblemCollapse() {
     { label: "Ship Master", icon: "M" },
     { label: "Shipbroker", icon: "B" },
   ];
+  const documents = [
+    { label: "Fixture Note", icon: "F" },
+    { label: "Charterparty", icon: "C" },
+    { label: "SOFs", icon: "S" },
+    { label: "NORs", icon: "N" },
+  ];
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-28">
