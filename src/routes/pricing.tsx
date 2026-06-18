@@ -58,10 +58,10 @@ function PricingPage() {
             <ul className="mt-8 space-y-3 text-sm">
               {[
                 "Voyage workspace",
-                "Charterer collaboration",
+                "Charterer & broker collaboration",
                 "Timeline tracking",
                 "Document management",
-                "AI-powered insights",
+                "AI-powered analytics",
                 "Claims-ready records",
                 "Unlimited collaborator seats",
               ].map((b) => (
@@ -81,7 +81,7 @@ function PricingPage() {
 
           <article className="rounded-2xl border border-navy/10 bg-cloud p-10">
             <span className="rounded bg-teal/10 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider text-teal">
-              Try the platform
+              TRY THE PLATFORM
             </span>
             <div className="mt-4 flex items-baseline gap-1.5">
               <span className="text-5xl font-extrabold tracking-tight">Free</span>
