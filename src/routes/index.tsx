@@ -109,24 +109,14 @@ function Hero() {
 
 /* ---------- Problem Collapse ---------- */
 function ProblemCollapse() {
-  const channels = [
-    { label: "Email", icon: "M" },
-    { label: "WhatsApp", icon: "W" },
-    { label: "Calls", icon: "C" },
-    { label: "Teams", icon: "T" },
-  ];
+  const channels = ["Email", "WhatsApp", "Calls", "Teams"];
   const partners = [
-    { label: "Shipowner / Operator", icon: "S" },
-    { label: "Port Agent", icon: "P" },
-    { label: "Ship Master", icon: "M" },
-    { label: "Shipbroker", icon: "B" },
+    "Shipowner / Operator",
+    "Port Agent",
+    "Ship Master",
+    "Shipbroker",
   ];
-  const documents = [
-    { label: "Fixture Note", icon: "F" },
-    { label: "Charterparty", icon: "C" },
-    { label: "SOFs", icon: "S" },
-    { label: "NORs", icon: "N" },
-  ];
+  const documents = ["Fixture Note", "Charterparty", "SOFs", "NORs"];
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-28">
