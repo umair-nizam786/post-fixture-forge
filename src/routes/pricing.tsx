@@ -107,7 +107,6 @@ function PricingPage() {
             </ul>
             <Link
               to="/request-access"
-              search={{ trial: "true" }}
               className="mt-10 block rounded-xl border border-navy/20 bg-white py-3.5 text-center text-sm font-semibold text-navy hover:bg-navy/[0.04]"
             >
               Try for free
