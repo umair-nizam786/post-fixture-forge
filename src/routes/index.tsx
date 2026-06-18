@@ -32,7 +32,6 @@ function HomePage() {
       <ProblemCollapse />
       <ProductGrid />
       <PersonaTabs />
-      <PricingTeaser />
       <TrustRow />
       <FinalCTA />
     </Layout>
