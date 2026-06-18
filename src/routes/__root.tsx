@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Portcall — The operating system for post-fixture maritime execution" },
+      { title: "Portcall | Unified VoyageRecord System" },
       { name: "description", content: "Portcall connects shipowners, charterers, and brokers in one shared voyage workspace. Replace fragmented coordination with a trusted execution layer." },
       { name: "author", content: "Portcall" },
       { property: "og:site_name", content: "Portcall" },
-      { property: "og:title", content: "Portcall — Mission control for maritime execution" },
-      { property: "og:description", content: "One shared workspace for every voyage, customer, and operational event." },
+      { property: "og:title", content: "Portcall | Unified VoyageRecord System" },
+      { property: "og:description", content: "Portcall connects shipowners, charterers, and brokers in one shared voyage workspace. Replace fragmented coordination with a trusted execution layer." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Portcall | Unified VoyageRecord System" },
+      { name: "twitter:description", content: "Portcall connects shipowners, charterers, and brokers in one shared voyage workspace. Replace fragmented coordination with a trusted execution layer." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/c2cc01b5-0538-44d0-9a94-5e0e7a2611c8" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/c2cc01b5-0538-44d0-9a94-5e0e7a2611c8" },
     ],
     links: [
       {
