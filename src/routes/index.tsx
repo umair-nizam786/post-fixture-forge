@@ -99,8 +99,8 @@ function Hero() {
           style={{ animationDelay: "180ms" }}
         >
           <VoyageWorkspace />
-          <p className="mt-6 max-w-md font-mono text-[10px] uppercase tracking-[0.2em] text-navy/40">
-            Live voyage workspace · shared between owner, charterer, and broker
+          <p className="mt-6 max-w-md font-mono text-[10px] uppercase tracking-[0.2em] text-navy/40 whitespace-pre-line">
+            LIVE VOYAGE WORKSPACE{"\n"}SHARED BETWEEN OWNER, CHARTERER, AND BROKER
           </p>
         </div>
       </div>
@@ -186,14 +186,14 @@ function ProductGrid() {
     },
     {
       kicker: "03",
-      title: "Charterer collaboration",
+      title: "Charterer & broker collaboration",
       body:
         "Give customers visibility without constant follow-ups. Charterers see what they need, when they need it.",
       accent: "teal",
     },
     {
       kicker: "04",
-      title: "AI intelligence",
+      title: "AI-powered analytics",
       body:
         "Detect missing updates, summarise voyage status, surface risks, and extract data from operational documents.",
       accent: "signal",
@@ -399,6 +399,7 @@ function PersonaTabs() {
               <Row label="Timeline intelligence" value="Included" />
               <Row label="AI insights" value="Included" />
               <Row label="Claims-ready records" value="Included" />
+              <Row label="{"\n\n"}Claims-ready records" value="Included" />
               <Row
                 label="Collaborator seats"
                 value="Unlimited"
@@ -417,7 +418,7 @@ function Row({
   value,
   accent,
 }: {
-  label: string;
+  label: React.ReactNode;
   value: string;
   accent?: boolean;
 }) {
