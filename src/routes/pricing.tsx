@@ -79,7 +79,7 @@ function PricingPage() {
               to="/request-access"
               className="mt-10 block rounded-xl bg-navy py-3.5 text-center text-sm font-semibold text-cloud hover:bg-slate"
             >
-              Request pricing
+              Launch your voyage
             </Link>
           </article>
 
