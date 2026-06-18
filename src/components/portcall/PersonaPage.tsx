@@ -88,12 +88,14 @@ export function PersonaPage(p: PersonaPageProps) {
             >
               {p.ctaPrimary.label}
             </Link>
-            <Link
-              to="/pricing"
-              className="rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-cloud hover:bg-white/10"
-            >
-              View pricing
-            </Link>
+            {p.ctaSecondary ? (
+              <Link
+                to={p.ctaSecondary.to}
+                className="rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-cloud hover:bg-white/10"
+              >
+                {p.ctaSecondary.label}
+              </Link>
+            ) : null}
           </div>
         </div>
       </section>

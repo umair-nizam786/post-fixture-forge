@@ -47,7 +47,6 @@ export const Route = createFileRoute("/brokers")({
           "Brokers join voyage workspaces as collaborators; no seat fees, no per-voyage charges.",
       }}
       ctaPrimary={{ label: "See the workflow", to: "/request-access" }}
-      ctaSecondary={{ label: "View pricing", to: "/pricing" }}
     />
   ),
 });
