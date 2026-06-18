@@ -62,8 +62,8 @@ export function VoyageWorkspace() {
             badge="Verified"
           />
           <EventRow
-            color="signal"
-            title="Bunker adjustment confirmed"
+            color="red"
+            title="Berthing delay due to crane failure"
             meta="Brokerage Ltd. · 412 MT IFO"
             stamp="09:41 UTC"
           />
