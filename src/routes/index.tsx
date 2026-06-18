@@ -174,7 +174,7 @@ function ProductGrid() {
       kicker: "01",
       title: "Voyage workspace",
       body:
-        "One place for every voyage. All parties, all documents, all events — collected against a single fixture.",
+        "One place for every voyage. All parties, all documents, all events, recorded for a single fixture.",
       accent: "navy",
     },
     {
@@ -195,12 +195,12 @@ function ProductGrid() {
       kicker: "04",
       title: "AI-powered analytics",
       body:
-        "Detect missing updates, summarise voyage status, surface risks, and extract data from operational documents.",
+        "Find useful insights from voyage level and portfolio level analytics, on your private account or WhatsApp.",
       accent: "signal",
     },
     {
       kicker: "05",
-      title: "\n\nClaims-ready records",
+      title: "Claims-ready records",
       body:
         "Build a clearer evidence trail as the voyage unfolds. Support faster resolution when questions arise.",
       accent: "navy",
@@ -222,7 +222,7 @@ function ProductGrid() {
               The product
             </span>
             <h2 className="mt-3 max-w-2xl text-balance text-3xl font-bold tracking-tight md:text-4xl">
-              Built for post-fixture operations — not for spreadsheets.
+              Built around voyages
             </h2>
           </div>
           <Link
@@ -285,7 +285,7 @@ const personaContent: Record<
     bullets: [
       "Structured voyage visibility for your charterers",
       "Automated event summaries from operational data",
-      "\n\nClaims-ready records",
+      "Claims-ready records",
     ],
     pricing: "Simple voyage-based pricing. From $479 per voyage.",
     cta: { label: "Improve voyage execution", to: "/operators" },
@@ -398,7 +398,7 @@ function PersonaTabs() {
               <Row label="Voyage workspace" value="Included" />
               <Row label="Timeline intelligence" value="Included" />
               <Row label="AI insights" value="Included" />
-              <Row label={<span className="whitespace-pre-line">{"\n\n"}Claims-ready records</span>} value="Included" />
+              <Row label={<span>Claims-ready records</span>} value="Included" />
               <Row
                 label="Collaborator seats"
                 value="Unlimited"
