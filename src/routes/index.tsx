@@ -200,7 +200,7 @@ function ProductGrid() {
     },
     {
       kicker: "05",
-      title: "Claims readiness",
+      title: "\n\nClaims-ready records",
       body:
         "Build a clearer evidence trail as the voyage unfolds. Support faster resolution when questions arise.",
       accent: "navy",
