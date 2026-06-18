@@ -6,6 +6,7 @@ import {
   DialogDescription,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Link } from "@tanstack/react-router";
 
 export function ComingSoonDialog({
   children,
