@@ -74,20 +74,6 @@ function Hero() {
             </ComingSoonDialog>
           </div>
 
-          <dl className="mt-14 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-8">
-            {[
-              ["Voyage workspaces", "One per fixture"],
-              ["Event types", "120+ tracked"],
-              ["Parties connected", "SHIPOWNER ·OPERATOR CHARTERER · BROKER"],
-            ].map(([v, l]) => (
-              <div key={l}>
-                <dt className="font-mono text-[10px] uppercase tracking-wider text-cloud/40">
-                  {l}
-                </dt>
-                <dd className="mt-1 text-sm font-semibold text-cloud">{v}</dd>
-              </div>
-            ))}
-          </dl>
         </div>
       </div>
 
