@@ -38,12 +38,11 @@ export function Nav() {
           </Link>
         </div>
         <div className="flex items-center gap-3">
-          <Link
-            to="/request-access"
-            className="hidden text-xs font-medium text-navy/70 transition-colors hover:text-navy sm:block"
-          >
-            Sign in
-          </Link>
+          <ComingSoonDialog>
+            <button className="hidden text-xs font-medium text-navy/70 transition-colors hover:text-navy sm:block">
+              Sign in
+            </button>
+          </ComingSoonDialog>
           <Link
             to="/request-access"
             className="rounded-full bg-navy px-4 py-2 text-xs font-semibold text-cloud transition-colors hover:bg-slate"

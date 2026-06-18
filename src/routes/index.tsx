@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Layout } from "@/components/portcall/Layout";
 import { VoyageWorkspace } from "@/components/portcall/VoyageWorkspace";
+import { ComingSoonDialog } from "@/components/portcall/ComingSoonDialog";
 
 export const Route = createFileRoute("/")({
   head: () => ({
