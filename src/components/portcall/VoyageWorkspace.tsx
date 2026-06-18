@@ -55,6 +55,12 @@ export function VoyageWorkspace() {
         {/* Event log */}
         <div className="space-y-2.5">
           <EventRow
+            color="navy"
+            title="Statement of facts shared with charterer"
+            meta="Auto-summary · 3 events"
+            stamp="08:02 LT"
+          />
+          <EventRow
             color="teal"
             title="NOR tendered"
             meta="Capt. Aris · Berth 4"
@@ -66,12 +72,6 @@ export function VoyageWorkspace() {
             title="Berthing delay due to crane failure"
             meta="2 out of 4 cranes down"
             stamp="19:41 LT"
-          />
-          <EventRow
-            color="navy"
-            title="Statement of facts shared with charterer"
-            meta="Auto-summary · 3 events"
-            stamp="08:02 LT"
           />
         </div>
       </div>
