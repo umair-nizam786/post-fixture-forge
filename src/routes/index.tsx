@@ -569,7 +569,7 @@ function FinalCTA() {
             to="/request-access"
             className="rounded-xl bg-signal px-7 py-4 text-sm font-semibold text-cloud transition-transform hover:scale-[1.02]"
           >
-            Request early access
+            TRY THE PLATFORM
           </Link>
           <Link
             to="/request-access"
