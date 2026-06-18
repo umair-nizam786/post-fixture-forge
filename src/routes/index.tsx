@@ -55,9 +55,9 @@ function Hero() {
             Mission control for{" "}
             <span className="text-teal">post-fixture</span> maritime execution.
           </h1>
-          <p className="mt-8 max-w-md text-pretty text-lg text-cloud/70">
-            Connect every voyage, customer, and operational event in one shared
-            workspace. Stop chasing threads — start executing on evidence.
+          <p className="mt-8 max-w-md text-pretty text-lg text-cloud/70 whitespace-pre-line">
+            Connect every voyage, counterparties, and operational events in one shared workspace.{"\u00a0"}{"\n"}
+            Stop chasing threads, start executing on evidence.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
@@ -79,7 +79,7 @@ function Hero() {
             {[
               ["Voyage workspaces", "One per fixture"],
               ["Event types", "120+ tracked"],
-              ["Parties connected", "Owner · Charterer · Broker"],
+              ["Parties connected", "SHIPOWNER ·OPERATOR CHARTERER · BROKER"],
             ].map(([v, l]) => (
               <div key={l}>
                 <dt className="font-mono text-[10px] uppercase tracking-wider text-cloud/40">
