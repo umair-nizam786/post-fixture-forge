@@ -216,7 +216,7 @@ function ProblemCollapse() {
           </svg>
         </div>
         <p className="mt-4 font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-teal">
-          Everything converges here
+          TURNED INTO A SINGLE SOURCE OF TRUTH
         </p>
       </div>
 
