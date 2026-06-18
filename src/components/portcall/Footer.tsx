@@ -9,7 +9,7 @@ export function Footer() {
           <div className="max-w-sm space-y-4">
             <Logo />
             <p className="text-sm text-navy/60">
-              The operating system for post-fixture maritime execution.
+              The collaboration system for maritime fixture execution.
             </p>
             <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-navy/30">
               Built for global trade · © {new Date().getFullYear()}
