@@ -119,6 +119,7 @@ function ProblemCollapse() {
     { label: "Shipowner / Operator", icon: "S" },
     { label: "Port Agent", icon: "P" },
     { label: "Master", icon: "M" },
+    { label: "Shipbroker", icon: "B" },
   ];
 
   return (
