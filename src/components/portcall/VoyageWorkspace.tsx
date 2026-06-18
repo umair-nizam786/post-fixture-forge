@@ -93,7 +93,7 @@ function EventRow({
   badge?: string;
 }) {
   const dot =
-    color === "teal" ? "bg-teal" : color === "signal" ? "bg-signal" : "bg-navy/70";
+    color === "teal" ? "bg-teal" : color === "signal" ? "bg-signal" : color === "red" ? "bg-red-500" : "bg-navy/70";
   return (
     <div className="flex items-center justify-between rounded-lg border border-navy/5 bg-navy/[0.02] px-3.5 py-2.5">
       <div className="flex items-center gap-3">
