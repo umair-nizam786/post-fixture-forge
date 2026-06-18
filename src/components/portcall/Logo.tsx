@@ -11,7 +11,7 @@ export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
         className="h-9 w-auto shrink-0"
         aria-hidden="true"
       />
-      <span className={`font-sans text-[13px] font-bold uppercase leading-none tracking-[0.18em] mt-[2px] ${text}`}>
+      <span className={`font-sans text-[13px] font-bold uppercase leading-none tracking-[0.18em] mt-[4px] ${text}`}>
         Portcall
       </span>
     </Link>
