@@ -56,8 +56,8 @@ export function VoyageWorkspace() {
         <div className="space-y-2.5">
           <EventRow
             color="navy"
-            title="Statement of facts shared with charterer"
-            meta="Load Port SOF shared with charterer"
+            title="Load Port SOF shared with charterer"
+            meta="Auto-summary · 3 stoppages · Review"
             stamp="08:02 LT"
             date="11 JUN"
           />
@@ -66,15 +66,15 @@ export function VoyageWorkspace() {
             title="NOR tendered"
             meta="Capt. Aris · Berth 4"
             stamp="14:20 LT"
-            date="1 JUN"
+            date="16 JUN"
             badge="Verified"
           />
           <EventRow
             color="red"
             title="Berthing delay due to crane failure"
-            meta="Auto-summary · 3 stoppages · Review"
+            meta="2 out of 4 cranes down · Review Dynamic Dicharge Port Laytime"
             stamp="19:41 LT"
-            date="1 JUN"
+            date="16 JUN"
           />
         </div>
       </div>
