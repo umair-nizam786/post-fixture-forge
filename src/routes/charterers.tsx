@@ -22,7 +22,7 @@ export const Route = createFileRoute("/charterers")({
   component: () => (
     <PersonaPage
       kicker="Charterer"
-      headline="Stay aligned. Stop chasing updates."
+      headline={<><span className="text-teal">Stay aligned</span>. Stop chasing updates.</>}
       sub="Access a shared voyage timeline that captures what happened, when it happened, and why; through your operating partners, at no cost to you."
       bullets={[
         {

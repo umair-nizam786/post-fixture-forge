@@ -22,7 +22,7 @@ export const Route = createFileRoute("/brokers")({
   component: () => (
     <PersonaPage
       kicker="Shipbroker"
-      headline="Stay connected throughout execution."
+      headline={<>Stay <span className="text-teal">connected</span> throughout execution.</>}
       sub="Maintain stronger alignment between commercial parties through a shared execution workflow. Your insight empowers the fixture."
       bullets={[
         {
