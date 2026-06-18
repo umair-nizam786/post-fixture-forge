@@ -109,24 +109,14 @@ function Hero() {
 
 /* ---------- Problem Collapse ---------- */
 function ProblemCollapse() {
-  const channels = [
-    { label: "Email", icon: "M" },
-    { label: "WhatsApp", icon: "W" },
-    { label: "Calls", icon: "C" },
-    { label: "Teams", icon: "T" },
-  ];
+  const channels = ["Email", "WhatsApp", "Calls", "Teams"];
   const partners = [
-    { label: "Shipowner / Operator", icon: "S" },
-    { label: "Port Agent", icon: "P" },
-    { label: "Ship Master", icon: "M" },
-    { label: "Shipbroker", icon: "B" },
+    "Shipowner / Operator",
+    "Port Agent",
+    "Ship Master",
+    "Shipbroker",
   ];
-  const documents = [
-    { label: "Fixture Note", icon: "F" },
-    { label: "Charterparty", icon: "C" },
-    { label: "SOFs", icon: "S" },
-    { label: "NORs", icon: "N" },
-  ];
+  const documents = ["Fixture Note", "Charterparty", "SOFs", "NORs"];
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-28">
@@ -150,15 +140,12 @@ function ProblemCollapse() {
             Channels
           </p>
           <div className="flex flex-wrap justify-center gap-2 md:flex-col md:items-stretch">
-            {channels.map((c) => (
+          {channels.map((c) => (
               <div
-                key={c.label}
-                className="flex items-center gap-3 rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
+                key={c}
+                className="flex items-center rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-navy/5 font-mono text-sm font-bold text-navy/70">
-                  {c.icon}
-                </span>
-                <span className="text-sm font-semibold text-navy">{c.label}</span>
+                <span className="text-sm font-semibold text-navy">{c}</span>
               </div>
             ))}
           </div>
@@ -172,13 +159,10 @@ function ProblemCollapse() {
           <div className="flex flex-wrap justify-center gap-2 md:flex-col md:items-stretch">
             {partners.map((p) => (
               <div
-                key={p.label}
-                className="flex items-center gap-3 rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
+                key={p}
+                className="flex items-center rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-navy/5 font-mono text-sm font-bold text-navy/70">
-                  {p.icon}
-                </span>
-                <span className="text-sm font-semibold text-navy">{p.label}</span>
+                <span className="text-sm font-semibold text-navy">{p}</span>
               </div>
             ))}
           </div>
@@ -192,13 +176,10 @@ function ProblemCollapse() {
           <div className="flex flex-wrap justify-center gap-2 md:flex-col md:items-stretch">
             {documents.map((d) => (
               <div
-                key={d.label}
-                className="flex items-center gap-3 rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
+                key={d}
+                className="flex items-center rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-navy/5 font-mono text-sm font-bold text-navy/70">
-                  {d.icon}
-                </span>
-                <span className="text-sm font-semibold text-navy">{d.label}</span>
+                <span className="text-sm font-semibold text-navy">{d}</span>
               </div>
             ))}
           </div>
