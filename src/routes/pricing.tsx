@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Layout } from "@/components/portcall/Layout";
+import { useState } from "react";
 
 export const Route = createFileRoute("/pricing")({
   head: () => ({
@@ -71,6 +72,9 @@ function PricingPage() {
                 </li>
               ))}
             </ul>
+
+            <MoreFeatures />
+
             <Link
               to="/request-access"
               className="mt-10 block rounded-xl bg-navy py-3.5 text-center text-sm font-semibold text-cloud hover:bg-slate"
@@ -145,6 +149,39 @@ function PricingPage() {
         </div>
       </section>
     </Layout>
+  );
+}
+
+function MoreFeatures() {
+  const [open, setOpen] = useState(false);
+  const items = [
+    "AIS based voyage tracking from vessel start port",
+    "Automated, dynamic laytime calculations",
+    "Email Integration for auto populating voyage events",
+  ];
+
+  return (
+    <div className="mt-4">
+      {!open && (
+        <button
+          onClick={() => setOpen(true)}
+          className="flex items-center gap-2 text-sm font-medium text-navy/60 hover:text-navy transition-colors"
+        >
+          <span className="size-1.5 rounded-full bg-navy/30" />
+          More
+        </button>
+      )}
+      {open && (
+        <ul className="space-y-3 text-sm animate-in fade-in slide-in-from-top-1 duration-200">
+          {items.map((item) => (
+            <li key={item} className="flex items-center gap-3">
+              <span className="size-1.5 rounded-full bg-teal" />
+              {item}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
 
