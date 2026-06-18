@@ -357,7 +357,7 @@ const personaContent: Record<
     kicker: "Charterer",
     headline: "Stay aligned without chasing updates.",
     body:
-      "Access shared voyage timelines through your operating partners. Understand what happened, when it happened, and why — without another inbox to manage.",
+      "Access shared voyage timelines through your operating partners. Understand what happened, when it happened, and why, without another inbox to manage.",
     bullets: [
       "Real-time voyage visibility from the operator",
       "Shared timeline of events and milestones",
