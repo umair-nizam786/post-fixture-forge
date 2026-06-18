@@ -342,7 +342,7 @@ const personaContent: Record<
 > = {
   operator: {
     kicker: "Shipowner / Operator",
-    headline: "Delight your customer experience.",
+    headline: "Delight your customers.",
     body:
       "Deliver a transparent execution experience for every charterer. Reduce manual follow-ups and maintain a reliable record of voyage events.",
     bullets: [
