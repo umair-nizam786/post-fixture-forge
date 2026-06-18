@@ -143,7 +143,7 @@ function ProblemCollapse() {
       </div>
 
       {/* Scattered inputs */}
-      <div className="mt-16 grid gap-10 md:grid-cols-2 md:gap-12">
+      <div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-12">
         {/* Channels */}
         <div className="flex flex-col gap-4">
           <p className="text-center font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/40">
@@ -179,6 +179,26 @@ function ProblemCollapse() {
                   {p.icon}
                 </span>
                 <span className="text-sm font-semibold text-navy">{p.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Documents */}
+        <div className="flex flex-col gap-4">
+          <p className="text-center font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/40">
+            Documents
+          </p>
+          <div className="flex flex-wrap justify-center gap- setVisible md:flex-col md:items-stretch">
+            {documents.map((d) => (
+              <div
+                key={d.label}
+                className="flex items-center gap-3 rounded-xl border border-navy/10 bg-white px-4 py-3 shadow-sm transition-transform hover:-translate-y-0.5"
+              >
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-navy/5 font-mono text-sm font-bold text-navy/70">
+                  {d.icon}
+                </span>
+                <span className="text-sm font-semibold text-navy">{d.label}</span>
               </div>
             ))}
           </div>
