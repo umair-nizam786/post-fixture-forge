@@ -14,8 +14,8 @@ export function Nav() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <div className="flex items-center gap-8">
           <Logo />
-          <div className="hidden h-7 w-px bg-navy/10 md:block" />
-          <div className="hidden items-center gap-1 rounded-full bg-navy/5 p-1 md:flex">
+          <div className="hidden h-7 w-px bg-navy/10 lg:block" />
+          <div className="hidden items-center gap-1 rounded-full bg-navy/5 p-1 lg:flex">
             {personas.map((p) => (
               <Link
                 key={p.to}
@@ -32,7 +32,7 @@ export function Nav() {
           </div>
           <Link
             to="/pricing"
-            className="hidden text-xs font-medium text-navy/70 transition-colors hover:text-navy md:block"
+            className="hidden text-xs font-medium text-navy/70 transition-colors hover:text-navy lg:block"
           >
             Pricing
           </Link>
