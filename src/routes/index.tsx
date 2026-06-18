@@ -119,6 +119,7 @@ function ProblemCollapse() {
     { label: "Shipowner / Operator", icon: "S" },
     { label: "Port Agent", icon: "P" },
     { label: "Master", icon: "M" },
+    { label: "Shipbroker", icon: "B" },
   ];
 
   return (
@@ -170,6 +171,7 @@ function ProblemCollapse() {
               <path d="M 240 45 Q 140 45 140 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
               <path d="M 240 75 Q 140 75 140 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
               <path d="M 240 105 Q 140 105 140 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
+              <path d="M 240 135 Q 140 135 140 100" stroke="#e2e8f0" strokeWidth="1.5" fill="none" />
             </svg>
           </div>
 
