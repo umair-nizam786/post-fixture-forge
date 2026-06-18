@@ -43,7 +43,7 @@ type FormState = {
   companyType: "" | "operator" | "charterer" | "broker";
 };
 
-const CALENDLY_URL = "https://calendly.com/portcall/intro";
+const CALENDLY_URL = "https://calendly.com/umair-portcall/30min";
 
 function RequestAccessPage() {
   const [form, setForm] = useState<FormState>({
