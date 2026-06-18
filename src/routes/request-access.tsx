@@ -154,12 +154,14 @@ function RequestAccessPage() {
                 </div>
               </div>
 
-              <button
-                type="submit"
-                className="mt-8 w-full rounded-xl bg-navy py-4 text-sm font-semibold text-cloud transition-colors hover:bg-slate"
+              <a
+                href="https://calendly.com/umair-portcall/30min"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 block w-full rounded-xl bg-navy py-4 text-center text-sm font-semibold text-cloud transition-colors hover:bg-slate"
               >
                 Let's speak!
-              </button>
+              </a>
               <p className="mt-3 text-center text-xs text-navy/50">
                 By submitting, you agree to be contacted about Portcall early access.
               </p>
