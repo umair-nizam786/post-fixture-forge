@@ -130,18 +130,18 @@ function PricingPage() {
           </div>
           <PricingRow
             role="Shipowner / Operator"
-            note="Primary customer. Pay per voyage executed through the platform."
+            note="The executor. Pay per voyage executed through the platform."
             price="From $479 / voyage"
           />
           <PricingRow
             role="Charterer"
-            note="Free access through participating operators."
+            note="The beneficiary. Free access through participating operators."
             price="$0"
             accent
           />
           <PricingRow
             role="Shipbroker"
-            note="Collaboration access to voyage workspaces."
+            note="The facilitator. Collaboration access to voyage workspaces."
             price="$0"
             accent
             last
