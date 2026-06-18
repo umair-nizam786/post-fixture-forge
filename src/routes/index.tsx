@@ -209,7 +209,7 @@ function ProductGrid() {
       kicker: "06",
       title: "Operational record",
       body:
-        "A trusted, shared account of what actually happened — referenceable long after the voyage ends.",
+        "A trusted, shared account of what actually happened, referenceable long after the voyage ends.",
       accent: "teal",
     },
   ];
@@ -279,7 +279,7 @@ const personaContent: Record<
 > = {
   operator: {
     kicker: "Shipowner / Operator",
-    headline: "Help your team become easier to work with.",
+    headline: "Delight your customer experience.",
     body:
       "Deliver a transparent execution experience for every charterer. Reduce manual follow-ups and maintain a reliable record of voyage events.",
     bullets: [
