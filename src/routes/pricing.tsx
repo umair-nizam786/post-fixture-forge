@@ -92,7 +92,7 @@ function PricingPage() {
             <div className="mt-4 flex items-baseline gap-1.5">
               <span className="text-5xl font-extrabold tracking-tight">Free</span>
               <span className="font-mono text-[11px] uppercase tracking-wider text-navy/40">
-                / first 5 events
+                / FIRST 5 VOYAGES
               </span>
             </div>
             <p className="mt-2 text-sm text-navy/60">
