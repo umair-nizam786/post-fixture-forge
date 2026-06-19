@@ -327,7 +327,7 @@ function ProductGrid() {
 }
 
 /* ---------- Persona Tabs ---------- */
-type PersonaKey = "operator" | "charterer" | "broker";
+type PersonaKey = "operator" | "charterer" | "broker" | "agent";
 
 const personaContent: Record<
   PersonaKey,
