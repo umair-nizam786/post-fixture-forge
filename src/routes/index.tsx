@@ -108,22 +108,22 @@ function ProblemCollapse() {
     <section className="mx-auto max-w-7xl px-6 py-28">
       <div className="flex flex-col items-center text-center">
         <span className="font-mono text-[10px] font-semibold uppercase tracking-[0.25em] text-navy/40">
-          The fragmentation gap
+          THE EXECUTION GAP
         </span>
         <h2 className="mt-4 max-w-2xl text-balance text-3xl font-bold tracking-tight text-navy md:text-4xl">
-          After the fixture, execution scatters across channels and partners.
+          The fixture is fixed. But value is usually lost during execution.
         </h2>
         <p className="mt-4 max-w-xl text-pretty text-navy/60">
-          See accurate operational updates as they happen, not days later through a forwarded email thread. Get notified on WhatsApp.
+          Every voyage relies on dozens of updates between owners, charterers, brokers, agents, and vessels. When information is scattered across channels and stakeholders, small communication gaps can turn into delays, disputes, and financial leakage.
         </p>
       </div>
 
       {/* Scattered inputs */}
       <div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-12">
-        {/* Channels */}
+        {/* COMMUNICATION */}
         <div className="flex flex-col gap-4">
           <p className="text-center font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/40">
-            Channels
+            COMMUNICATION
           </p>
           <div className="flex flex-wrap justify-center gap-2 md:flex-col md:items-stretch">
           {channels.map((c) => (
@@ -137,10 +137,10 @@ function ProblemCollapse() {
           </div>
         </div>
 
-        {/* Partners */}
+        {/* PEOPLE */}
         <div className="flex flex-col gap-4">
           <p className="text-center font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/40">
-            Partners
+            PEOPLE
           </p>
           <div className="flex flex-wrap justify-center gap-2 md:flex-col md:items-stretch">
             {partners.map((p) => (
@@ -154,10 +154,10 @@ function ProblemCollapse() {
           </div>
         </div>
 
-        {/* Documents */}
+        {/* INFORMATION */}
         <div className="flex flex-col gap-4">
           <p className="text-center font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/40">
-            Documents
+            INFORMATION
           </p>
           <div className="flex flex-wrap justify-center gap-2 md:flex-col md:items-stretch">
             {documents.map((d) => (
