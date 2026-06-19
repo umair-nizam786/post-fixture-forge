@@ -379,6 +379,19 @@ const personaContent: Record<
     pricing: "Collaboration access at no cost to brokers.",
     cta: { label: "See the workflow", to: "/brokers" },
   },
+  agent: {
+    kicker: "Port Agent",
+    headline: "Become the trusted source of truth for every voyage.",
+    body:
+      "Capture, structure, and share critical port information with principals in real time. Transform fragmented updates into reliable voyage intelligence.",
+    bullets: [
+      "Real-time operational updates from the port",
+      "Complete port call timeline for principals",
+      "Stronger relationships through data partnership",
+    ],
+    pricing: "Collaboration access at no cost to port agents.",
+    cta: { label: "Join as a data partner", to: "/agents" },
+  },
 };
 
 function PersonaTabs() {
@@ -388,6 +401,7 @@ function PersonaTabs() {
     { key: "operator", label: "Operator" },
     { key: "charterer", label: "Charterer" },
     { key: "broker", label: "Broker" },
+    { key: "agent", label: "Port Agent" },
   ];
   return (
     <section className="bg-navy px-6 py-28 text-cloud">
