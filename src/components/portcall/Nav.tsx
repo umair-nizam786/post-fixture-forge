@@ -6,7 +6,7 @@ const personas = [
   { to: "/operators", label: "Operator" },
   { to: "/charterers", label: "Charterer" },
   { to: "/brokers", label: "Broker" },
-  { to: "/agents", label: "Port Agent" },
+  { to: "/agents", label: "Agent" },
 ] as const;
 
 export function Nav() {
