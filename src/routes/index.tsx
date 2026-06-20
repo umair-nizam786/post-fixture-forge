@@ -102,7 +102,7 @@ function ProblemCollapse() {
     "Ship Master",
     "Shipbroker",
   ];
-  const documents = ["Fixture Note", "Charterparty", "SOFs", "NORs"];
+  const documents = ["Charterparty / Fixture Note", "SOFs and NORs", "Voyage Issues", "Voyage Data"];
 
   return (
     <section className="mx-auto max-w-7xl px-6 py-28">
