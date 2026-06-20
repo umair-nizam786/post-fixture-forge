@@ -4,13 +4,13 @@ import { Layout } from "@/components/portcall/Layout";
 export const Route = createFileRoute("/privacy")({
   head: () => ({
     meta: [
-      { title: "Privacy — Portcall" },
+      { title: "Privacy - Portcall" },
       {
         name: "description",
         content:
           "Privacy information for Portcall.",
       },
-      { property: "og:title", content: "Privacy — Portcall" },
+      { property: "og:title", content: "Privacy - Portcall" },
       {
         property: "og:description",
         content: "Privacy information for Portcall.",

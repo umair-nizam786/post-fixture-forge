@@ -4,13 +4,13 @@ import { Layout } from "@/components/portcall/Layout";
 export const Route = createFileRoute("/security")({
   head: () => ({
     meta: [
-      { title: "Security — Portcall" },
+      { title: "Security - Portcall" },
       {
         name: "description",
         content:
           "Security information for Portcall.",
       },
-      { property: "og:title", content: "Security — Portcall" },
+      { property: "og:title", content: "Security - Portcall" },
       {
         property: "og:description",
         content: "Security information for Portcall.",

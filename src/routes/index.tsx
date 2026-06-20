@@ -7,13 +7,13 @@ import { ComingSoonDialog } from "@/components/portcall/ComingSoonDialog";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Portcall — The collaboration system for maritime fixture execution" },
+      { title: "Portcall - Unified Voyage Record System" },
       {
         name: "description",
         content:
           "Connect every voyage, customer, and operational event in one shared workspace. The voyage timeline becomes the trusted source of truth for what actually happened.",
       },
-      { property: "og:title", content: "Portcall — Mission control for maritime execution" },
+      { property: "og:title", content: "Portcall - Mission control for maritime execution" },
       {
         property: "og:description",
         content: "One shared workspace for shipowners, charterers, and brokers.",

@@ -4,7 +4,7 @@ import { PersonaPage } from "@/components/portcall/PersonaPage";
 export const Route = createFileRoute("/operators")({
   head: () => ({
     meta: [
-      { title: "For Shipowners & Operators — Portcall" },
+      { title: "For Shipowners & Operators - Portcall" },
       {
         name: "description",
         content:

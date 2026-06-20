@@ -4,13 +4,13 @@ import { Layout } from "@/components/portcall/Layout";
 export const Route = createFileRoute("/status")({
   head: () => ({
     meta: [
-      { title: "Status — Portcall" },
+      { title: "Status - Portcall" },
       {
         name: "description",
         content:
           "System status for Portcall.",
       },
-      { property: "og:title", content: "Status — Portcall" },
+      { property: "og:title", content: "Status - Portcall" },
       {
         property: "og:description",
         content: "System status for Portcall.",
