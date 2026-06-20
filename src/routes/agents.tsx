@@ -23,7 +23,7 @@ export const Route = createFileRoute("/agents")({
     <PersonaPage
       kicker="Port Agent"
       headline={<>From local port knowledge to <span className="text-teal">global voyage visibility</span>.</>}
-      sub="Port Agents keep global trade moving. They coordinate the critical moments that determine whether a voyage stays on schedule. Portcall enables agents to capture operational events, share real-time updates, and provide principals with a complete view of every port call — reducing uncertainty and improving execution."
+      sub="Port Agents keep global trade moving. They coordinate the critical moments that determine whether a voyage stays on schedule. Portcall enables agents to capture operational events, share real-time updates, and provide principals with a complete view of every port call, reducing uncertainty and improving execution."
       bullets={[
         {
           title: "Real-time operational updates",
