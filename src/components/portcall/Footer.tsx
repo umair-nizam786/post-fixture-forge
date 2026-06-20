@@ -30,6 +30,7 @@ export function Footer() {
               links={[
                 { to: "/request-access", label: "Request access" },
                 { to: "/request-access", label: "Contact" },
+                { to: "/pricing", label: "Pricing" },
               ]}
             />
             <FooterCol
