@@ -22,8 +22,8 @@ export const Route = createFileRoute("/agents")({
   component: () => (
     <PersonaPage
       kicker="Port Agent"
-      headline={<>From local port knowledge to <span className="text-teal">global voyage visibility</span>.</>}
-      sub="Port Agents keep global trade moving. They coordinate the critical moments that determine whether a voyage stays on schedule. Portcall enables agents to capture operational events, share real-time updates, and provide principals with a complete view of every port call, reducing uncertainty and improving execution."
+      headline={<>From port expertise<br />to <span className="text-teal">stronger principal relationships</span>.</>}
+      sub="Transform the knowledge you gather at every port call into real-time voyage intelligence that helps your principals execute with confidence."
       bullets={[
         {
           title: "Real-time operational updates",
