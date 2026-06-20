@@ -149,7 +149,7 @@ function PricingPage() {
           />
           <PricingRow
             role="Agent"
-            note="The local expert. Free collaboration access as an operational contributor."
+            note="The local expert. Free access as an operational contributor."
             price="$0"
             accent
             last
