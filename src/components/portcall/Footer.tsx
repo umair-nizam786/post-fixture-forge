@@ -22,6 +22,7 @@ export function Footer() {
                 { to: "/operators", label: "Operators" },
                 { to: "/charterers", label: "Charterers" },
                 { to: "/brokers", label: "Brokers" },
+                { to: "/agents", label: "Agents" },
                 { to: "/pricing", label: "Pricing" },
               ]}
             />
