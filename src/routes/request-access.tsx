@@ -6,13 +6,13 @@ import { Layout } from "@/components/portcall/Layout";
 export const Route = createFileRoute("/request-access")({
   head: () => ({
     meta: [
-      { title: "Request early access — Portcall" },
+      { title: "Request early access - Portcall" },
       {
         name: "description",
         content:
           "Become a Portcall design partner. Tell us about your operations and we'll schedule a call to activate your workspace.",
       },
-      { property: "og:title", content: "Request early access — Portcall" },
+      { property: "og:title", content: "Request early access - Portcall" },
       {
         property: "og:description",
         content: "Tell us about your operations.",

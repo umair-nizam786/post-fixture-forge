@@ -10,7 +10,7 @@ export const Route = createFileRoute("/unsubscribe")({
   }),
   head: () => ({
     meta: [
-      { title: "Unsubscribe — Portcall" },
+      { title: "Unsubscribe - Portcall" },
       { name: "robots", content: "noindex" },
     ],
   }),
