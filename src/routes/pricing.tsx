@@ -146,6 +146,12 @@ function PricingPage() {
             note="The facilitator. Collaboration access to voyage workspaces."
             price="$0"
             accent
+          />
+          <PricingRow
+            role="Agent"
+            note="The local expert. Free collaboration access as an operational contributor."
+            price="$0"
+            accent
             last
           />
         </div>
