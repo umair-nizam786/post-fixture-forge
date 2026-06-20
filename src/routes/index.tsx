@@ -401,7 +401,7 @@ function PersonaTabs() {
     { key: "operator", label: "Operator" },
     { key: "charterer", label: "Charterer" },
     { key: "broker", label: "Broker" },
-    { key: "agent", label: "Port Agent" },
+    { key: "agent", label: "Agent" },
   ];
   return (
     <section className="bg-navy px-6 py-28 text-cloud">
