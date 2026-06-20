@@ -7,7 +7,7 @@ import { ComingSoonDialog } from "@/components/portcall/ComingSoonDialog";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Portcall - Unified Voyage Record System" },
+      { title: "Unified Voyage Record System - Portcall" },
       {
         name: "description",
         content:
