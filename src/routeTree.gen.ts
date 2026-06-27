@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as UnsubscribeRouteImport } from './routes/unsubscribe'
 import { Route as StatusRouteImport } from './routes/status'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SecurityRouteImport } from './routes/security'
 import { Route as RequestAccessRouteImport } from './routes/request-access'
 import { Route as PrivacyRouteImport } from './routes/privacy'
@@ -35,6 +36,11 @@ const UnsubscribeRoute = UnsubscribeRouteImport.update({
 const StatusRoute = StatusRouteImport.update({
   id: '/status',
   path: '/status',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SecurityRoute = SecurityRouteImport.update({
@@ -126,6 +132,7 @@ export interface FileRoutesByFullPath {
   '/privacy': typeof PrivacyRoute
   '/request-access': typeof RequestAccessRoute
   '/security': typeof SecurityRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/status': typeof StatusRoute
   '/unsubscribe': typeof UnsubscribeRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
@@ -145,6 +152,7 @@ export interface FileRoutesByTo {
   '/privacy': typeof PrivacyRoute
   '/request-access': typeof RequestAccessRoute
   '/security': typeof SecurityRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/status': typeof StatusRoute
   '/unsubscribe': typeof UnsubscribeRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
@@ -165,6 +173,7 @@ export interface FileRoutesById {
   '/privacy': typeof PrivacyRoute
   '/request-access': typeof RequestAccessRoute
   '/security': typeof SecurityRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/status': typeof StatusRoute
   '/unsubscribe': typeof UnsubscribeRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
@@ -186,6 +195,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/request-access'
     | '/security'
+    | '/sitemap.xml'
     | '/status'
     | '/unsubscribe'
     | '/email/unsubscribe'
@@ -205,6 +215,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/request-access'
     | '/security'
+    | '/sitemap.xml'
     | '/status'
     | '/unsubscribe'
     | '/email/unsubscribe'
@@ -224,6 +235,7 @@ export interface FileRouteTypes {
     | '/privacy'
     | '/request-access'
     | '/security'
+    | '/sitemap.xml'
     | '/status'
     | '/unsubscribe'
     | '/email/unsubscribe'
@@ -244,6 +256,7 @@ export interface RootRouteChildren {
   PrivacyRoute: typeof PrivacyRoute
   RequestAccessRoute: typeof RequestAccessRoute
   SecurityRoute: typeof SecurityRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   StatusRoute: typeof StatusRoute
   UnsubscribeRoute: typeof UnsubscribeRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
@@ -268,6 +281,13 @@ declare module '@tanstack/react-router' {
       path: '/status'
       fullPath: '/status'
       preLoaderRoute: typeof StatusRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/security': {
@@ -388,6 +408,7 @@ const rootRouteChildren: RootRouteChildren = {
   PrivacyRoute: PrivacyRoute,
   RequestAccessRoute: RequestAccessRoute,
   SecurityRoute: SecurityRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   StatusRoute: StatusRoute,
   UnsubscribeRoute: UnsubscribeRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
@@ -400,13 +421,3 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
