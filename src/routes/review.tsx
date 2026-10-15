@@ -182,7 +182,7 @@ function CommercialReviewPage() {
         <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1fr_1.4fr] md:gap-20">
           <div>
             <Eyebrow>The person behind the review</Eyebrow>
-            <h2 className="mt-4 font-display text-2xl font-semibold tracking-tight text-navy">Umair Nizam</h2>
+            <h2 className="mt-4 font-display text-2xl font-semibold tracking-tight text-navy">Umair Nizam, MICS</h2>
             <p className="mt-2 text-sm text-navy/50">Founder, Portcall · Maritime technology</p>
           </div>
           <div>
