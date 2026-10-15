@@ -176,5 +176,40 @@ body {
 }
 
 .pc-fade-up { animation: pc-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
-.pc-draw-line { transform-origin: left center; animation: pc-draw-line 1.1s cubic-bezier(0.16, 1, 0.3, 1) both; }
+.pc-draw-line { transform-origin: left center; }
 .pc-pulse-soft { animation: pc-pulse-soft 2.2s ease-in-out infinite; }
+
+/* Scroll-triggered workspace reveal */
+.pc-workspace .pc-reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.pc-workspace.is-in .pc-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+.pc-workspace .pc-draw-line {
+  transform: scaleX(0);
+}
+.pc-workspace.is-in .pc-draw-line {
+  animation: pc-draw-line 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pc-workspace .pc-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .pc-workspace .pc-draw-line {
+    transform: none;
+    animation: none;
+  }
+  .pc-pulse-soft {
+    animation: none;
+  }
+}

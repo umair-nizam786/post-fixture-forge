@@ -1,6 +1,40 @@
+import { useEffect, useRef, useState } from "react";
+
+function useInView<T extends HTMLElement>() {
+  const ref = useRef<T | null>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    if (typeof IntersectionObserver === "undefined") {
+      setInView(true);
+      return;
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.25 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return { ref, inView };
+}
+
 export function VoyageWorkspace() {
+  const { ref, inView } = useInView<HTMLDivElement>();
+
   return (
-    <div className="overflow-hidden rounded-2xl bg-white shadow-[0_40px_80px_-30px_rgba(7,26,43,0.25)] ring-1 ring-navy/5">
+    <div
+      ref={ref}
+      className={`pc-workspace ${inView ? "is-in" : ""} overflow-hidden rounded-2xl bg-white shadow-[0_40px_80px_-30px_rgba(7,26,43,0.25)] ring-1 ring-navy/5`}
+    >
       <div className="flex items-center justify-between border-b border-navy/5 bg-navy/[0.02] px-4 py-3">
         <div className="flex items-center gap-4">
           <div className="flex gap-1.5">
@@ -28,8 +62,12 @@ export function VoyageWorkspace() {
               { label: "NOR", state: "done" },
               { label: "Transit", state: "active" },
               { label: "Discharge", state: "pending" },
-            ].map((n) => (
-              <div key={n.label} className="relative flex flex-col items-center">
+            ].map((n, i) => (
+              <div
+                key={n.label}
+                className="pc-reveal relative flex flex-col items-center"
+                style={{ transitionDelay: `${150 + i * 160}ms` }}
+              >
                 <span
                   className={[
                     "z-10 size-3.5 rounded-full ring-4 ring-white",
@@ -54,28 +92,38 @@ export function VoyageWorkspace() {
 
         {/* Event log */}
         <div className="space-y-2.5">
-          <EventRow
-            color="navy"
-            title="Load Port SOF shared with charterer"
-            meta="Auto-summary · 3 stoppages · Review"
-            stamp="08:02 LT"
-            date="11 JUN"
-          />
-          <EventRow
-            color="teal"
-            title="NOR tendered"
-            meta="Capt. Aris · Berth 4"
-            stamp="14:20 LT"
-            date="16 JUN"
-            badge="Verified"
-          />
-          <EventRow
-            color="red"
-            title="Berthing delay due to crane failure"
-            meta="2 out of 4 cranes down · Review Dynamic Dicharge Port Laytime"
-            stamp="19:41 LT"
-            date="16 JUN"
-          />
+          {[
+            {
+              color: "navy" as const,
+              title: "Load Port SOF shared with charterer",
+              meta: "Auto-summary · 3 stoppages · Review",
+              stamp: "08:02 LT",
+              date: "11 JUN",
+            },
+            {
+              color: "teal" as const,
+              title: "NOR tendered",
+              meta: "Capt. Aris · Berth 4",
+              stamp: "14:20 LT",
+              date: "16 JUN",
+              badge: "Verified",
+            },
+            {
+              color: "red" as const,
+              title: "Berthing delay due to crane failure",
+              meta: "2 out of 4 cranes down · Review Dynamic Dicharge Port Laytime",
+              stamp: "19:41 LT",
+              date: "16 JUN",
+            },
+          ].map((e, i) => (
+            <div
+              key={e.title}
+              className="pc-reveal"
+              style={{ transitionDelay: `${650 + i * 220}ms` }}
+            >
+              <EventRow {...e} />
+            </div>
+          ))}
         </div>
       </div>
     </div>
