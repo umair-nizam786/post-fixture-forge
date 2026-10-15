@@ -10,7 +10,12 @@ export const Route = createFileRoute("/unsubscribe")({
   }),
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Unsubscribe - Portcall" },
+      { name: "description", content: "Manage your Portcall email subscription." },
+      { property: "og:title", content: "Unsubscribe - Portcall" },
+      { property: "og:description", content: "Manage your Portcall email subscription." },
       { name: "robots", content: "noindex" },
     ],
   }),

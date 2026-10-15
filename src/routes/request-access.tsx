@@ -6,6 +6,8 @@ import { Layout } from "@/components/portcall/Layout";
 export const Route = createFileRoute("/request-access")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Request early access - Portcall" },
       {
         name: "description",
