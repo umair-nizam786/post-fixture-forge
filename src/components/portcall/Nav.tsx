@@ -32,7 +32,7 @@ export function Nav() {
             ))}
           </div>
           <Link
-            to="/voyage-commercial-review"
+            to="/review"
             className="hidden text-xs font-semibold text-navy/70 transition-colors hover:text-navy sm:block"
           >
             Commercial review
@@ -59,7 +59,7 @@ export function Nav() {
         </div>
       </div>
       <div className="border-t border-navy/5 px-6 py-2.5 sm:hidden">
-        <Link to="/voyage-commercial-review" className="flex items-center justify-between text-xs font-medium text-navy/70">
+        <Link to="/review" className="flex items-center justify-between text-xs font-medium text-navy/70">
           Voyage Commercial Review <span aria-hidden="true">→</span>
         </Link>
       </div>

@@ -17,11 +17,11 @@ import { Route as OperatorsRouteImport } from './routes/operators'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as RequestAccessRouteImport } from './routes/request-access'
+import { Route as ReviewRouteImport } from './routes/review'
 import { Route as SecurityRouteImport } from './routes/security'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as StatusRouteImport } from './routes/status'
 import { Route as UnsubscribeRouteImport } from './routes/unsubscribe'
-import { Route as VoyageCommercialReviewRouteImport } from './routes/voyage-commercial-review'
 import { Route as EmailUnsubscribeRouteImport } from './routes/email/unsubscribe'
 import { Route as ApiPublicAccessRequestRouteImport } from './routes/api/public/access-request'
 import { Route as LovableEmailSuppressionRouteImport } from './routes/lovable/email/suppression'
@@ -69,6 +69,11 @@ const RequestAccessRoute = RequestAccessRouteImport.update({
   path: '/request-access',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ReviewRoute = ReviewRouteImport.update({
+  id: '/review',
+  path: '/review',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SecurityRoute = SecurityRouteImport.update({
   id: '/security',
   path: '/security',
@@ -87,11 +92,6 @@ const StatusRoute = StatusRouteImport.update({
 const UnsubscribeRoute = UnsubscribeRouteImport.update({
   id: '/unsubscribe',
   path: '/unsubscribe',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const VoyageCommercialReviewRoute = VoyageCommercialReviewRouteImport.update({
-  id: '/voyage-commercial-review',
-  path: '/voyage-commercial-review',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EmailUnsubscribeRoute = EmailUnsubscribeRouteImport.update({
@@ -137,11 +137,11 @@ export interface FileRoutesByFullPath {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/request-access': typeof RequestAccessRoute
+  '/review': typeof ReviewRoute
   '/security': typeof SecurityRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/status': typeof StatusRoute
   '/unsubscribe': typeof UnsubscribeRoute
-  '/voyage-commercial-review': typeof VoyageCommercialReviewRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/api/public/access-request': typeof ApiPublicAccessRequestRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -158,11 +158,11 @@ export interface FileRoutesByTo {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/request-access': typeof RequestAccessRoute
+  '/review': typeof ReviewRoute
   '/security': typeof SecurityRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/status': typeof StatusRoute
   '/unsubscribe': typeof UnsubscribeRoute
-  '/voyage-commercial-review': typeof VoyageCommercialReviewRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/api/public/access-request': typeof ApiPublicAccessRequestRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -180,11 +180,11 @@ export interface FileRoutesById {
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/request-access': typeof RequestAccessRoute
+  '/review': typeof ReviewRoute
   '/security': typeof SecurityRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/status': typeof StatusRoute
   '/unsubscribe': typeof UnsubscribeRoute
-  '/voyage-commercial-review': typeof VoyageCommercialReviewRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/api/public/access-request': typeof ApiPublicAccessRequestRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -203,11 +203,11 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/request-access'
+    | '/review'
     | '/security'
     | '/sitemap.xml'
     | '/status'
     | '/unsubscribe'
-    | '/voyage-commercial-review'
     | '/email/unsubscribe'
     | '/api/public/access-request'
     | '/lovable/email/suppression'
@@ -224,11 +224,11 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/request-access'
+    | '/review'
     | '/security'
     | '/sitemap.xml'
     | '/status'
     | '/unsubscribe'
-    | '/voyage-commercial-review'
     | '/email/unsubscribe'
     | '/api/public/access-request'
     | '/lovable/email/suppression'
@@ -245,11 +245,11 @@ export interface FileRouteTypes {
     | '/pricing'
     | '/privacy'
     | '/request-access'
+    | '/review'
     | '/security'
     | '/sitemap.xml'
     | '/status'
     | '/unsubscribe'
-    | '/voyage-commercial-review'
     | '/email/unsubscribe'
     | '/api/public/access-request'
     | '/lovable/email/suppression'
@@ -267,11 +267,11 @@ export interface RootRouteChildren {
   PricingRoute: typeof PricingRoute
   PrivacyRoute: typeof PrivacyRoute
   RequestAccessRoute: typeof RequestAccessRoute
+  ReviewRoute: typeof ReviewRoute
   SecurityRoute: typeof SecurityRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   StatusRoute: typeof StatusRoute
   UnsubscribeRoute: typeof UnsubscribeRoute
-  VoyageCommercialReviewRoute: typeof VoyageCommercialReviewRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
   ApiPublicAccessRequestRoute: typeof ApiPublicAccessRequestRoute
   LovableEmailSuppressionRoute: typeof LovableEmailSuppressionRoute
@@ -338,6 +338,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RequestAccessRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/review': {
+      id: '/review'
+      path: '/review'
+      fullPath: '/review'
+      preLoaderRoute: typeof ReviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/security': {
       id: '/security'
       path: '/security'
@@ -364,13 +371,6 @@ declare module '@tanstack/react-router' {
       path: '/unsubscribe'
       fullPath: '/unsubscribe'
       preLoaderRoute: typeof UnsubscribeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/voyage-commercial-review': {
-      id: '/voyage-commercial-review'
-      path: '/voyage-commercial-review'
-      fullPath: '/voyage-commercial-review'
-      preLoaderRoute: typeof VoyageCommercialReviewRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/email/unsubscribe': {
@@ -427,11 +427,11 @@ const rootRouteChildren: RootRouteChildren = {
   PricingRoute: PricingRoute,
   PrivacyRoute: PrivacyRoute,
   RequestAccessRoute: RequestAccessRoute,
+  ReviewRoute: ReviewRoute,
   SecurityRoute: SecurityRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   StatusRoute: StatusRoute,
   UnsubscribeRoute: UnsubscribeRoute,
-  VoyageCommercialReviewRoute: VoyageCommercialReviewRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
   ApiPublicAccessRequestRoute: ApiPublicAccessRequestRoute,
   LovableEmailSuppressionRoute: LovableEmailSuppressionRoute,
