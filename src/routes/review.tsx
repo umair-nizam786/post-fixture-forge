@@ -19,7 +19,6 @@ export const Route = createFileRoute("/review")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://portcall.tech/review" }],
   }),
   component: CommercialReviewPage,
 });
