@@ -9,6 +9,7 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as VoyageCommercialReviewRouteImport } from './routes/voyage-commercial-review'
 import { Route as UnsubscribeRouteImport } from './routes/unsubscribe'
 import { Route as StatusRouteImport } from './routes/status'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -28,6 +29,11 @@ import { Route as LovableEmailTransactionalSendRouteImport } from './routes/lova
 import { Route as LovableEmailTransactionalPreviewRouteImport } from './routes/lovable/email/transactional/preview'
 import { Route as LovableEmailQueueProcessRouteImport } from './routes/lovable/email/queue/process'
 
+const VoyageCommercialReviewRoute = VoyageCommercialReviewRouteImport.update({
+  id: '/voyage-commercial-review',
+  path: '/voyage-commercial-review',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const UnsubscribeRoute = UnsubscribeRouteImport.update({
   id: '/unsubscribe',
   path: '/unsubscribe',
@@ -135,6 +141,7 @@ export interface FileRoutesByFullPath {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/status': typeof StatusRoute
   '/unsubscribe': typeof UnsubscribeRoute
+  '/voyage-commercial-review': typeof VoyageCommercialReviewRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/api/public/access-request': typeof ApiPublicAccessRequestRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -155,6 +162,7 @@ export interface FileRoutesByTo {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/status': typeof StatusRoute
   '/unsubscribe': typeof UnsubscribeRoute
+  '/voyage-commercial-review': typeof VoyageCommercialReviewRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/api/public/access-request': typeof ApiPublicAccessRequestRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -176,6 +184,7 @@ export interface FileRoutesById {
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/status': typeof StatusRoute
   '/unsubscribe': typeof UnsubscribeRoute
+  '/voyage-commercial-review': typeof VoyageCommercialReviewRoute
   '/email/unsubscribe': typeof EmailUnsubscribeRoute
   '/api/public/access-request': typeof ApiPublicAccessRequestRoute
   '/lovable/email/suppression': typeof LovableEmailSuppressionRoute
@@ -198,6 +207,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/status'
     | '/unsubscribe'
+    | '/voyage-commercial-review'
     | '/email/unsubscribe'
     | '/api/public/access-request'
     | '/lovable/email/suppression'
@@ -218,6 +228,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/status'
     | '/unsubscribe'
+    | '/voyage-commercial-review'
     | '/email/unsubscribe'
     | '/api/public/access-request'
     | '/lovable/email/suppression'
@@ -238,6 +249,7 @@ export interface FileRouteTypes {
     | '/sitemap.xml'
     | '/status'
     | '/unsubscribe'
+    | '/voyage-commercial-review'
     | '/email/unsubscribe'
     | '/api/public/access-request'
     | '/lovable/email/suppression'
@@ -259,6 +271,7 @@ export interface RootRouteChildren {
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   StatusRoute: typeof StatusRoute
   UnsubscribeRoute: typeof UnsubscribeRoute
+  VoyageCommercialReviewRoute: typeof VoyageCommercialReviewRoute
   EmailUnsubscribeRoute: typeof EmailUnsubscribeRoute
   ApiPublicAccessRequestRoute: typeof ApiPublicAccessRequestRoute
   LovableEmailSuppressionRoute: typeof LovableEmailSuppressionRoute
@@ -269,6 +282,13 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/voyage-commercial-review': {
+      id: '/voyage-commercial-review'
+      path: '/voyage-commercial-review'
+      fullPath: '/voyage-commercial-review'
+      preLoaderRoute: typeof VoyageCommercialReviewRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/unsubscribe': {
       id: '/unsubscribe'
       path: '/unsubscribe'
@@ -411,6 +431,7 @@ const rootRouteChildren: RootRouteChildren = {
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   StatusRoute: StatusRoute,
   UnsubscribeRoute: UnsubscribeRoute,
+  VoyageCommercialReviewRoute: VoyageCommercialReviewRoute,
   EmailUnsubscribeRoute: EmailUnsubscribeRoute,
   ApiPublicAccessRequestRoute: ApiPublicAccessRequestRoute,
   LovableEmailSuppressionRoute: LovableEmailSuppressionRoute,

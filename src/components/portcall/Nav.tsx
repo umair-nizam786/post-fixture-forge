@@ -15,8 +15,8 @@ export function Nav() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <div className="flex items-center gap-8">
           <Logo />
-          <div className="hidden h-7 w-px bg-navy/10 lg:block" />
-          <div className="hidden items-center gap-1 rounded-full bg-navy/5 p-1 lg:flex">
+          <div className="hidden h-7 w-px bg-navy/10 xl:block" />
+          <div className="hidden items-center gap-1 rounded-full bg-navy/5 p-1 xl:flex">
             {personas.map((p) => (
               <Link
                 key={p.to}
@@ -31,6 +31,12 @@ export function Nav() {
               </Link>
             ))}
           </div>
+          <Link
+            to="/voyage-commercial-review"
+            className="hidden text-xs font-semibold text-navy/70 transition-colors hover:text-navy sm:block"
+          >
+            Commercial review
+          </Link>
           <Link
             to="/pricing"
             className="hidden text-xs font-medium text-navy/70 transition-colors hover:text-navy lg:block"
@@ -51,6 +57,11 @@ export function Nav() {
             <span className="uppercase">TRY THE PLATFORM</span>
           </Link>
         </div>
+      </div>
+      <div className="border-t border-navy/5 px-6 py-2.5 sm:hidden">
+        <Link to="/voyage-commercial-review" className="flex items-center justify-between text-xs font-medium text-navy/70">
+          Voyage Commercial Review <span aria-hidden="true">→</span>
+        </Link>
       </div>
     </nav>
   );
