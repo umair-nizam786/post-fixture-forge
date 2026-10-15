@@ -15,8 +15,8 @@ export function Nav() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
         <div className="flex items-center gap-8">
           <Logo />
-          <div className="hidden h-7 w-px bg-navy/10 xl:block" />
-          <div className="hidden items-center gap-1 rounded-full bg-navy/5 p-1 xl:flex">
+          <div className="hidden h-7 w-px bg-navy/10 lg:block" />
+          <div className="hidden items-center gap-1 rounded-full bg-navy/5 p-1 lg:flex">
             {personas.map((p) => (
               <Link
                 key={p.to}
