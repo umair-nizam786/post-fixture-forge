@@ -5,6 +5,8 @@ import { useState } from "react";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Pricing - Portcall" },
       {
         name: "description",

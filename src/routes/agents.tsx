@@ -4,6 +4,8 @@ import { PersonaPage } from "@/components/portcall/PersonaPage";
 export const Route = createFileRoute("/agents")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "For Port Agents - Portcall" },
       {
         name: "description",
