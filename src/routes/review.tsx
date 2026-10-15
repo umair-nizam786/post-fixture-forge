@@ -8,7 +8,7 @@ import { CommercialReviewEvidence } from "@/components/portcall/CommercialReview
 const BOOKING_URL = "https://calendly.com/umair-portcall/30min";
 const description = "Turn your last 12 months of voyage correspondence into a clear commercial record. Evidence-linked findings, a specialist-checked management review, and one voyage reviewed free.";
 
-export const Route = createFileRoute("/voyage-commercial-review")({
+export const Route = createFileRoute("/review")({
   head: () => ({
     meta: [
       { title: "Voyage Commercial Review - Portcall" },
@@ -16,10 +16,10 @@ export const Route = createFileRoute("/voyage-commercial-review")({
       { property: "og:title", content: "Voyage Commercial Review - Portcall" },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://portcall.tech/voyage-commercial-review" },
+      { property: "og:url", content: "https://portcall.tech/review" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://portcall.tech/voyage-commercial-review" }],
+    links: [{ rel: "canonical", href: "https://portcall.tech/review" }],
   }),
   component: CommercialReviewPage,
 });
