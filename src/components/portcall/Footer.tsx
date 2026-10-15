@@ -19,7 +19,6 @@ export function Footer() {
             <FooterCol
               title="Product"
               links={[
-                { to: "/review", label: "Commercial review" },
                 { to: "/operators", label: "Operators" },
                 { to: "/charterers", label: "Charterers" },
                 { to: "/brokers", label: "Brokers" },

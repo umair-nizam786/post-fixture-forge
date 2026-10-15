@@ -13,10 +13,10 @@ export const Route = createFileRoute("/review")({
     meta: [
       { title: "Voyage Commercial Review - Portcall" },
       { name: "description", content: description },
+      { name: "robots", content: "noindex, nofollow" },
       { property: "og:title", content: "Voyage Commercial Review - Portcall" },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://portcall.tech/review" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "https://portcall.tech/review" }],

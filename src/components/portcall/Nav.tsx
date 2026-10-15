@@ -32,12 +32,6 @@ export function Nav() {
             ))}
           </div>
           <Link
-            to="/review"
-            className="hidden text-xs font-semibold text-navy/70 transition-colors hover:text-navy sm:block"
-          >
-            Commercial review
-          </Link>
-          <Link
             to="/pricing"
             className="hidden text-xs font-medium text-navy/70 transition-colors hover:text-navy lg:block"
           >
@@ -57,11 +51,6 @@ export function Nav() {
             <span className="uppercase">TRY THE PLATFORM</span>
           </Link>
         </div>
-      </div>
-      <div className="border-t border-navy/5 px-6 py-2.5 sm:hidden">
-        <Link to="/review" className="flex items-center justify-between text-xs font-medium text-navy/70">
-          Voyage Commercial Review <span aria-hidden="true">→</span>
-        </Link>
       </div>
     </nav>
   );
