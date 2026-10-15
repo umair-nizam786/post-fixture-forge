@@ -45,10 +45,10 @@ export function Nav() {
             </button>
           </ComingSoonDialog>
           <Link
-            to="/request-access"
+            to="/review"
             className="rounded-full bg-navy px-4 py-2 text-xs font-semibold text-cloud transition-colors hover:bg-slate"
           >
-            <span className="uppercase">TRY THE PLATFORM</span>
+            <span className="uppercase">COMMERCIAL REVIEW</span>
           </Link>
         </div>
       </div>
