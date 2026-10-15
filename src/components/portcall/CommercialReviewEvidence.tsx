@@ -54,7 +54,7 @@ export function CommercialReviewEvidence() {
   return (
     <div className="overflow-hidden rounded-lg border border-navy/15 bg-background text-navy" aria-label="Illustrative voyage commercial review">
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-navy/10 bg-cloud px-5 py-4">
-        <div className="flex items-center gap-2 text-sm font-semibold"><span className="size-2 rounded-full bg-teal" /> Voyage record <ChevronRight className="size-3 text-navy/40" /><span className="font-mono text-xs">2025 REVIEW</span></div>
+        <div className="flex items-center gap-2 text-sm font-semibold"><span className="size-2 rounded-full bg-teal" />Voyage Workspace <ChevronRight className="size-3 text-navy/40" /><span className="font-mono text-xs">2026&nbsp;REVIEW</span></div>
         <span className="font-mono text-[10px] uppercase text-navy/50">Illustrative example · not client data</span>
       </div>
       <div className="grid lg:grid-cols-[0.8fr_1fr_1.35fr]">
