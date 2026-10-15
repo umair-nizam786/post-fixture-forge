@@ -63,10 +63,10 @@ function Hero() {
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
-              to="/request-access"
+              to="/review"
               className="group inline-flex items-center gap-2 rounded-lg bg-signal px-5 py-3.5 text-sm font-semibold text-cloud transition-colors hover:bg-signal/90"
             >
-              TRY THE PLATFORM
+              VOYAGE COMMERCIAL REVIEW
               <span className="transition-transform group-hover:translate-x-0.5">→</span>
             </Link>
             <ComingSoonDialog>
@@ -555,10 +555,10 @@ function FinalCTA() {
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link
-            to="/request-access"
+            to="/review"
             className="rounded-xl bg-signal px-7 py-4 text-sm font-semibold text-cloud transition-transform hover:scale-[1.02]"
           >
-            TRY THE PLATFORM
+            VOYAGE COMMERCIAL REVIEW
           </Link>
           <Link
             to="/request-access"
