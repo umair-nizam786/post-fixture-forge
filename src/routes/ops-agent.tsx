@@ -132,7 +132,7 @@ function OpsAgentPage() {
           <div className="mx-auto max-w-3xl">
               <Eyebrow>One email, start to finish</Eyebrow>
               <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight md:text-4xl">
-                12:13. The master's time sheet arrives.
+                12:13. The master's <span className="text-teal">time sheet</span> arrives.
               </h2>
               <p className="mt-5 text-navy/70">
                 Crane No.4 broke down at Salalah. Two stoppages on the 19th, 0405 to
@@ -189,7 +189,7 @@ function OpsAgentPage() {
           <div className="max-w-3xl">
             <Eyebrow>What it does on every email</Eyebrow>
             <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight md:text-4xl">
-              It knows the voyage. It checks the CP. It writes the reply.
+              It knows the voyage. It checks the CP. It <span className="text-teal">writes the reply</span>.
             </h2>
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
@@ -273,7 +273,7 @@ function OpsAgentPage() {
           <div>
             <Eyebrow>Where it lives</Eyebrow>
             <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight md:text-4xl">
-              Inside Outlook. Nothing new to learn.
+              Inside Outlook. <span className="text-teal">Nothing new to learn</span>.
             </h2>
             <p className="mt-5 max-w-lg text-cloud/70">
               The Ops Agent opens next to the email you're reading. Your team keeps
@@ -302,7 +302,7 @@ function OpsAgentPage() {
           <div className="max-w-3xl">
             <Eyebrow>Your data</Eyebrow>
             <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight md:text-4xl">
-              Your email stays yours.
+              Your email <span className="text-teal">stays yours</span>.
             </h2>
           </div>
           <div className="mt-12 grid gap-px overflow-hidden rounded-2xl bg-navy/10 md:grid-cols-3">
@@ -335,7 +335,7 @@ function OpsAgentPage() {
           <div>
             <Eyebrow>Why it's free</Eyebrow>
             <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight md:text-4xl">
-              Free, because we want it on every ops desk.
+              <span className="text-teal">Free</span>, because we want it on every ops desk.
             </h2>
             <p className="mt-5 text-navy/70">
               Portcall is building one trusted record for every voyage. The Ops Agent
@@ -375,7 +375,7 @@ function OpsAgentPage() {
           <div className="max-w-3xl">
             <Eyebrow>Getting started</Eyebrow>
             <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight md:text-4xl">
-              Three steps to your first email.
+              Three steps to <span className="text-teal">your first email</span>.
             </h2>
           </div>
           <div className="mt-12 grid gap-px overflow-hidden rounded-2xl bg-navy/10 md:grid-cols-3">
@@ -414,7 +414,7 @@ function OpsAgentPage() {
           <div className="text-center">
             <Eyebrow>Get the Ops Agent free</Eyebrow>
             <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight md:text-4xl">
-              Leave your details and we'll call to set it up with you.
+              Leave your details and we'll call to <span className="text-teal">set it up with you</span>.
             </h2>
           </div>
           <OpsAgentForm />
@@ -445,7 +445,7 @@ function OpsAgentPage() {
             Portcall Ops Agent
           </p>
           <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight md:text-5xl">
-            Your next voyage email, already in context.
+            Your next voyage email, <span className="text-teal">already in context</span>.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-cloud/70">
             Free for operations teams. We're onboarding 5 dry bulk operating
