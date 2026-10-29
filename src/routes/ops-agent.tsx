@@ -58,7 +58,7 @@ const faqs = [
   },
   {
     q: "Who is it built for?",
-    a: "Dry bulk operators and owners on voyage charters, including operators with a time charter behind the voyage.",
+    a: "Dry bulk operators, owners, and charterers on voyage charters, including operators with a time charter behind the voyage.",
   },
   {
     q: "Will the drafts sound like us?",
