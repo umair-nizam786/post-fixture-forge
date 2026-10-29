@@ -14,6 +14,7 @@ import { Route as AgentsRouteImport } from './routes/agents'
 import { Route as BrokersRouteImport } from './routes/brokers'
 import { Route as CharterersRouteImport } from './routes/charterers'
 import { Route as OperatorsRouteImport } from './routes/operators'
+import { Route as OpsAgentRouteImport } from './routes/ops-agent'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as RequestAccessRouteImport } from './routes/request-access'
@@ -52,6 +53,11 @@ const CharterersRoute = CharterersRouteImport.update({
 const OperatorsRoute = OperatorsRouteImport.update({
   id: '/operators',
   path: '/operators',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OpsAgentRoute = OpsAgentRouteImport.update({
+  id: '/ops-agent',
+  path: '/ops-agent',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PricingRoute = PricingRouteImport.update({
@@ -134,6 +140,7 @@ export interface FileRoutesByFullPath {
   '/brokers': typeof BrokersRoute
   '/charterers': typeof CharterersRoute
   '/operators': typeof OperatorsRoute
+  '/ops-agent': typeof OpsAgentRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/request-access': typeof RequestAccessRoute
@@ -155,6 +162,7 @@ export interface FileRoutesByTo {
   '/brokers': typeof BrokersRoute
   '/charterers': typeof CharterersRoute
   '/operators': typeof OperatorsRoute
+  '/ops-agent': typeof OpsAgentRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/request-access': typeof RequestAccessRoute
@@ -177,6 +185,7 @@ export interface FileRoutesById {
   '/brokers': typeof BrokersRoute
   '/charterers': typeof CharterersRoute
   '/operators': typeof OperatorsRoute
+  '/ops-agent': typeof OpsAgentRoute
   '/pricing': typeof PricingRoute
   '/privacy': typeof PrivacyRoute
   '/request-access': typeof RequestAccessRoute
@@ -200,6 +209,7 @@ export interface FileRouteTypes {
     | '/brokers'
     | '/charterers'
     | '/operators'
+    | '/ops-agent'
     | '/pricing'
     | '/privacy'
     | '/request-access'
@@ -221,6 +231,7 @@ export interface FileRouteTypes {
     | '/brokers'
     | '/charterers'
     | '/operators'
+    | '/ops-agent'
     | '/pricing'
     | '/privacy'
     | '/request-access'
@@ -242,6 +253,7 @@ export interface FileRouteTypes {
     | '/brokers'
     | '/charterers'
     | '/operators'
+    | '/ops-agent'
     | '/pricing'
     | '/privacy'
     | '/request-access'
@@ -264,6 +276,7 @@ export interface RootRouteChildren {
   BrokersRoute: typeof BrokersRoute
   CharterersRoute: typeof CharterersRoute
   OperatorsRoute: typeof OperatorsRoute
+  OpsAgentRoute: typeof OpsAgentRoute
   PricingRoute: typeof PricingRoute
   PrivacyRoute: typeof PrivacyRoute
   RequestAccessRoute: typeof RequestAccessRoute
@@ -315,6 +328,13 @@ declare module '@tanstack/react-router' {
       path: '/operators'
       fullPath: '/operators'
       preLoaderRoute: typeof OperatorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ops-agent': {
+      id: '/ops-agent'
+      path: '/ops-agent'
+      fullPath: '/ops-agent'
+      preLoaderRoute: typeof OpsAgentRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/pricing': {
@@ -424,6 +444,7 @@ const rootRouteChildren: RootRouteChildren = {
   BrokersRoute: BrokersRoute,
   CharterersRoute: CharterersRoute,
   OperatorsRoute: OperatorsRoute,
+  OpsAgentRoute: OpsAgentRoute,
   PricingRoute: PricingRoute,
   PrivacyRoute: PrivacyRoute,
   RequestAccessRoute: RequestAccessRoute,
