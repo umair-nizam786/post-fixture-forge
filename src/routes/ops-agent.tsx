@@ -27,6 +27,9 @@ export const Route = createFileRoute("/ops-agent")({
   component: OpsAgentPage,
 });
 
+const WHATSAPP_URL = "https://wa.me/971585810774";
+const WHATSAPP_DISPLAY = "+971 58 581 0774";
+
 const formSchema = z.object({
   name: z.string().trim().min(1, "Required").max(100),
   email: z.string().trim().email("Invalid email").max(255),
@@ -176,7 +179,7 @@ function OpsAgentPage() {
             </h2>
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            <div className="rounded-2xl border border-navy/10 bg-white p-8">
+            <div className="flex flex-col rounded-2xl border border-navy/10 bg-white p-8">
               <h3 className="text-lg font-bold tracking-tight">
                 Every voyage carries its context.
               </h3>
@@ -186,8 +189,8 @@ function OpsAgentPage() {
                 carries the time charter with your head owners, so it knows which
                 side of the business an email touches.
               </p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {["Voyage CP", "TC CP", "Fixture recap"].map((c) => (
+              <div className="mt-auto flex flex-wrap gap-2 pt-6">
+                {["Voyage CP", "TC CP", "Fixture recap", "Voyage timeline"].map((c) => (
                   <span
                     key={c}
                     className="rounded-full bg-navy/5 px-3 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-navy/70"
@@ -197,7 +200,7 @@ function OpsAgentPage() {
                 ))}
               </div>
             </div>
-            <div className="rounded-2xl border border-navy/10 bg-white p-8">
+            <div className="flex flex-col rounded-2xl border border-navy/10 bg-white p-8">
               <h3 className="text-lg font-bold tracking-tight">
                 Discrepancies against the CP, flagged.
               </h3>
@@ -206,20 +209,22 @@ function OpsAgentPage() {
                 doesn't cover, the agent flags it on that email, on the day, while
                 it's still cheap to fix.
               </p>
-              <div className="mt-6 rounded-xl border border-navy/10 bg-cloud p-4">
-                <p className="font-mono text-[10px] font-semibold uppercase tracking-wider text-navy/40">
-                  Example · Crane No.4 · 19 Oct
-                </p>
-                <p className="mt-2 font-mono text-xs text-navy">
-                  Stopped 0405 to 0740 LT · 3 hrs 35 min
-                </p>
-                <ul className="mt-3 space-y-1.5 text-xs text-navy/60">
-                  <li>Voyage CP · ship's gear breakdown: check whether the time counts as laytime</li>
-                  <li>TC · time lost may put the vessel off-hire</li>
-                </ul>
+              <div className="mt-auto pt-6">
+                <div className="rounded-xl border border-navy/10 bg-cloud p-4">
+                  <p className="font-mono text-[10px] font-semibold uppercase tracking-wider text-navy/40">
+                    Example · Crane No.4 · 19 Oct
+                  </p>
+                  <p className="mt-2 font-mono text-xs text-navy">
+                    Stopped 0405 to 0740 LT · 3 hrs 35 min
+                  </p>
+                  <ul className="mt-3 space-y-1.5 text-xs text-navy/60">
+                    <li>Voyage CP · ship's gear breakdown: check whether the time counts as laytime</li>
+                    <li>TC · time lost may put the vessel off-hire</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div className="rounded-2xl border border-navy/10 bg-white p-8">
+            <div className="flex flex-col rounded-2xl border border-navy/10 bg-white p-8">
               <h3 className="text-lg font-bold tracking-tight">
                 Your reply, drafted in your words.
               </h3>
@@ -230,16 +235,18 @@ function OpsAgentPage() {
                 the facts from the thread and the charter party position behind it.
                 Read it, change what you like, and send it from Outlook.
               </p>
-              <div className="mt-6 rounded-xl border border-navy/10 bg-cloud p-4">
-                <p className="font-mono text-[10px] font-semibold uppercase tracking-wider text-navy/40">
-                  Draft · Reply all · 4 To, 13 Cc
-                </p>
-                <p className="mt-2 text-xs leading-relaxed text-navy/70">
-                  Tks for your time sheet. Noted Crane No.4 stopped at 0405 LT on 19
-                  Oct and resumed at 0740 LT, total 3 hrs 35 min. We are checking
-                  this against the agent's SOF and will revert on the off-hire
-                  position.
-                </p>
+              <div className="mt-auto pt-6">
+                <div className="rounded-xl border border-navy/10 bg-cloud p-4">
+                  <p className="font-mono text-[10px] font-semibold uppercase tracking-wider text-navy/40">
+                    Draft · Reply all · 4 To, 13 Cc
+                  </p>
+                  <p className="mt-2 text-xs leading-relaxed text-navy/70">
+                    Tks for your time sheet. Noted Crane No.4 stopped at 0405 LT on 19
+                    Oct and resumed at 0740 LT, total 3 hrs 35 min. We are checking
+                    this against the agent's SOF and will revert on the off-hire
+                    position.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -438,7 +445,9 @@ function OpsAgentPage() {
               Get it free
             </a>
             <a
-              href="#get-it-free"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
               className="rounded-lg border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-cloud hover:bg-white/10"
             >
               Message us on WhatsApp
@@ -573,7 +582,16 @@ function OpsAgentForm() {
         <p className="mt-3 text-center text-xs text-red-600">{submitError}</p>
       ) : null}
       <p className="mt-3 text-center text-xs text-navy/50">
-        We reply within one business day. Prefer WhatsApp? Message Umair directly.
+        We reply within one business day. Prefer WhatsApp?{" "}
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="font-medium text-signal hover:underline"
+        >
+          Message Umair on {WHATSAPP_DISPLAY}
+        </a>
+        .
       </p>
     </form>
   );
