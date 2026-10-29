@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
 import { Layout } from "@/components/portcall/Layout";
+import heroShot from "@/assets/ops-agent-hero.png";
+import panelShot from "@/assets/ops-agent-panel.png";
 
 export const Route = createFileRoute("/ops-agent")({
   head: () => ({
@@ -108,6 +110,19 @@ function OpsAgentPage() {
           <p className="mt-8 font-mono text-[11px] uppercase tracking-[0.2em] text-cloud/40">
             Onboarding 5 dry bulk operating companies in November 2026 · No card, no
             contract
+          </p>
+        </div>
+        <div className="mx-auto mt-14 max-w-5xl">
+          <div className="overflow-hidden rounded-xl border border-white/10 shadow-2xl shadow-navy/50">
+            <img
+              src={heroShot}
+              alt="A voyage email open in Outlook with the Portcall Ops Agent panel beside it, flagging approval needed and drafting the reply"
+              className="block w-full"
+              loading="eager"
+            />
+          </div>
+          <p className="mt-4 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-cloud/40">
+            The Ops Agent panel beside a live voyage email in Outlook
           </p>
         </div>
       </section>
