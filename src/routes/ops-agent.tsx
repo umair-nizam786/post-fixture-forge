@@ -3,7 +3,6 @@ import { useState } from "react";
 import { z } from "zod";
 import { Layout } from "@/components/portcall/Layout";
 import heroShot from "@/assets/ops-agent-hero.png";
-import panelShot from "@/assets/ops-agent-panel.png";
 
 export const Route = createFileRoute("/ops-agent")({
   head: () => ({
@@ -116,7 +115,7 @@ function OpsAgentPage() {
           <div className="overflow-hidden rounded-xl border border-white/10 shadow-2xl shadow-navy/50">
             <img
               src={heroShot}
-              alt="A voyage email open in Outlook with the Portcall Ops Agent panel beside it, flagging approval needed and drafting the reply"
+              alt="A voyage email open in Outlook with the Portcall Ops Agent panel beside it, summarising the stoppage and drafting the reply"
               className="block w-full"
               loading="eager"
             />
@@ -130,8 +129,7 @@ function OpsAgentPage() {
       {/* One email, start to finish */}
       <section id="walkthrough" className="bg-white px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-[1fr_340px] lg:items-start lg:gap-16">
-            <div className="max-w-3xl">
+          <div className="mx-auto max-w-3xl">
               <Eyebrow>One email, start to finish</Eyebrow>
               <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight md:text-4xl">
                 12:13. The master's time sheet arrives.
@@ -150,15 +148,6 @@ function OpsAgentPage() {
                 The Ops Agent does that work in the pane beside the email.
               </p>
             </div>
-            <div className="overflow-hidden rounded-xl border border-navy/10 bg-white shadow-xl shadow-navy/5 lg:sticky lg:top-8">
-              <img
-                src={panelShot}
-                alt="The Portcall Ops Agent panel: approval status, one-line summary, voyage context and the drafted reply"
-                className="block w-full"
-                loading="lazy"
-              />
-            </div>
-          </div>
           <div className="mt-12 grid gap-px overflow-hidden rounded-2xl bg-navy/10 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
