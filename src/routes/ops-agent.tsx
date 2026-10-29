@@ -27,6 +27,9 @@ export const Route = createFileRoute("/ops-agent")({
   component: OpsAgentPage,
 });
 
+const WHATSAPP_URL = "https://wa.me/971585810774";
+const WHATSAPP_DISPLAY = "+971 58 581 0774";
+
 const formSchema = z.object({
   name: z.string().trim().min(1, "Required").max(100),
   email: z.string().trim().email("Invalid email").max(255),
