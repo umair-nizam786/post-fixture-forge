@@ -39,11 +39,12 @@ export function Nav() {
           </Link>
         </div>
         <div className="flex items-center gap-3">
-          <ComingSoonDialog>
-            <button className="hidden text-xs font-medium text-navy/70 transition-colors hover:text-navy sm:block">
-              Sign in
-            </button>
-          </ComingSoonDialog>
+          <a
+            href="https://app.portcall.tech"
+            className="hidden text-xs font-medium text-navy/70 transition-colors hover:text-navy sm:block"
+          >
+            Sign in
+          </a>
           <Link
             to="/ops-agent"
             className="hidden rounded-full border border-navy/15 px-4 py-2 text-xs font-semibold text-navy/80 transition-colors hover:border-navy/30 hover:text-navy lg:block"
