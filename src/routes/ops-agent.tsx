@@ -81,7 +81,7 @@ function OpsAgentPage() {
       {/* Hero */}
       <section className="bg-navy px-6 py-24 text-cloud lg:py-32">
         <div className="mx-auto max-w-4xl text-center">
-          <Eyebrow>Portcall Ops Agent · Free for operations teams</Eyebrow>
+          <Eyebrow>PORTCALL OPS AGENT · FREE FOR DRY BULK OPERATIONS TEAMS</Eyebrow>
           <h1 className="mt-5 text-balance text-4xl font-extrabold leading-[1.05] tracking-tight md:text-6xl">
             Every voyage email, read against the{" "}
             <span className="text-teal">charter party</span>.
