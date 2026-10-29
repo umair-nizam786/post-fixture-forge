@@ -46,7 +46,7 @@ const faqs = [
   },
   {
     q: "Why do we need to talk to you first?",
-    a: "Because we set it up with you. Twenty minutes together means your charter parties are loaded, the agent knows how your team writes, and it gets things right from the first email.",
+    a: "Because we set it up with you. Twenty minutes together means your charter parties are loaded for live voyages, the agent know how your team writes, and it gets things right from the first email.",
   },
   {
     q: "Does it send emails on its own?",
