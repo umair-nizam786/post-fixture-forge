@@ -454,7 +454,7 @@ function OpsAgentPage() {
             </a>
           </div>
           <p className="mt-10 font-mono text-[11px] uppercase tracking-[0.2em] text-cloud/40">
-            Portcall · One voyage. One record. · team@portcall.tech
+            PORTCALL · ONE VOYAGE. ONE RECORD
           </p>
         </div>
       </section>
