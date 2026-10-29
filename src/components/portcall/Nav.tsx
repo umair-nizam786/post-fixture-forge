@@ -45,6 +45,12 @@ export function Nav() {
             </button>
           </ComingSoonDialog>
           <Link
+            to="/ops-agent"
+            className="hidden rounded-full border border-navy/15 px-4 py-2 text-xs font-semibold text-navy/80 transition-colors hover:border-navy/30 hover:text-navy lg:block"
+          >
+            Ops Agent
+          </Link>
+          <Link
             to="/review"
             className="rounded-full bg-navy px-4 py-2 text-xs font-semibold text-cloud transition-colors hover:bg-slate"
           >
