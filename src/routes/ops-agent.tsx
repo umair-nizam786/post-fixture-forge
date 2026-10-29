@@ -445,7 +445,9 @@ function OpsAgentPage() {
               Get it free
             </a>
             <a
-              href="#get-it-free"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noreferrer"
               className="rounded-lg border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-semibold text-cloud hover:bg-white/10"
             >
               Message us on WhatsApp
@@ -580,7 +582,16 @@ function OpsAgentForm() {
         <p className="mt-3 text-center text-xs text-red-600">{submitError}</p>
       ) : null}
       <p className="mt-3 text-center text-xs text-navy/50">
-        We reply within one business day. Prefer WhatsApp? Message Umair directly.
+        We reply within one business day. Prefer WhatsApp?{" "}
+        <a
+          href={WHATSAPP_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="font-medium text-signal hover:underline"
+        >
+          Message Umair on {WHATSAPP_DISPLAY}
+        </a>
+        .
       </p>
     </form>
   );
