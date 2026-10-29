@@ -215,7 +215,7 @@ function OpsAgentPage() {
                 side of the business an email touches.
               </p>
               <div className="mt-auto flex flex-wrap gap-2 pt-6">
-                {["Voyage CP", "TC CP", "Fixture recap", "Voyage timeline", "B/L", "SOF"].map((c) => (
+                {["Voyage CP", "TC CP", "Voyage timeline", "B/L", "SOF"].map((c) => (
                   <span
                     key={c}
                     className="rounded-full bg-navy/5 px-3 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-navy/70"
