@@ -79,6 +79,7 @@ export const Route = createFileRoute('/api/public/access-request')({
                 email: data.email,
                 phone: data.phone,
                 companyType: data.companyType,
+                source: data.source,
                 submittedAt: inserted?.created_at ?? new Date().toISOString(),
               },
             }),
