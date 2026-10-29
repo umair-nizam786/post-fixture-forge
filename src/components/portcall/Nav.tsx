@@ -48,7 +48,7 @@ export function Nav() {
             to="/review"
             className="rounded-full bg-navy px-4 py-2 text-xs font-semibold text-cloud transition-colors hover:bg-slate"
           >
-            <span className="uppercase">COMMERCIAL REVIEW</span>
+            Commercial Review
           </Link>
         </div>
       </div>
