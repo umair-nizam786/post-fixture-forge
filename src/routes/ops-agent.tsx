@@ -87,7 +87,7 @@ function OpsAgentPage() {
             <span className="text-teal">charter party</span>.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-cloud/70">
-            The Portcall Ops Agent sits beside your inbox in Outlook. It knows the
+            Portcall Ops Agent sits beside your inbox in Outlook. It knows the
             voyage behind every email and the charter parties behind the voyage. It
             flags what doesn't match, and it drafts your reply in your team's own
             words.
@@ -121,7 +121,7 @@ function OpsAgentPage() {
             />
           </div>
           <p className="mt-4 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-cloud/40">
-            The Ops Agent panel beside a live voyage email in Outlook
+            PORTCALL OPS AGENT PANEL BESIDE A LIVE VOYAGE EMAIL IN OUTLOOK
           </p>
         </div>
       </section>
