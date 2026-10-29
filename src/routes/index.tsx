@@ -66,7 +66,7 @@ function Hero() {
               to="/review"
               className="group inline-flex items-center gap-2 rounded-lg bg-signal px-5 py-3.5 text-sm font-semibold text-cloud transition-colors hover:bg-signal/90"
             >
-              VOYAGE COMMERCIAL REVIEW
+              Voyage Commercial Review
               <span className="transition-transform group-hover:translate-x-0.5">→</span>
             </Link>
             <ComingSoonDialog>
@@ -558,7 +558,7 @@ function FinalCTA() {
             to="/review"
             className="rounded-xl bg-signal px-7 py-4 text-sm font-semibold text-cloud transition-transform hover:scale-[1.02]"
           >
-            VOYAGE COMMERCIAL REVIEW
+            Voyage Commercial Review
           </Link>
           <Link
             to="/request-access"
