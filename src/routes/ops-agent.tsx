@@ -206,18 +206,19 @@ function OpsAgentPage() {
                 doesn't cover, the agent flags it on that email, on the day, while
                 it's still cheap to fix.
               </p>
-              <div className="mt-auto rounded-xl border border-navy/10 bg-cloud p-4 [margin-top:auto] pt-4" style={{ marginTop: "auto" }}>
-{/* PLACEHOLDER-DO-NOT-MATCH */}
-                <p className="font-mono text-[10px] font-semibold uppercase tracking-wider text-navy/40">
-                  Example · Crane No.4 · 19 Oct
-                </p>
-                <p className="mt-2 font-mono text-xs text-navy">
-                  Stopped 0405 to 0740 LT · 3 hrs 35 min
-                </p>
-                <ul className="mt-3 space-y-1.5 text-xs text-navy/60">
-                  <li>Voyage CP · ship's gear breakdown: check whether the time counts as laytime</li>
-                  <li>TC · time lost may put the vessel off-hire</li>
-                </ul>
+              <div className="mt-auto pt-6">
+                <div className="rounded-xl border border-navy/10 bg-cloud p-4">
+                  <p className="font-mono text-[10px] font-semibold uppercase tracking-wider text-navy/40">
+                    Example · Crane No.4 · 19 Oct
+                  </p>
+                  <p className="mt-2 font-mono text-xs text-navy">
+                    Stopped 0405 to 0740 LT · 3 hrs 35 min
+                  </p>
+                  <ul className="mt-3 space-y-1.5 text-xs text-navy/60">
+                    <li>Voyage CP · ship's gear breakdown: check whether the time counts as laytime</li>
+                    <li>TC · time lost may put the vessel off-hire</li>
+                  </ul>
+                </div>
               </div>
             </div>
             <div className="flex flex-col rounded-2xl border border-navy/10 bg-white p-8">
@@ -231,16 +232,18 @@ function OpsAgentPage() {
                 the facts from the thread and the charter party position behind it.
                 Read it, change what you like, and send it from Outlook.
               </p>
-              <div className="mt-auto rounded-xl border border-navy/10 bg-cloud p-4 pt-4" style={{ marginTop: "auto" }}>
-                <p className="font-mono text-[10px] font-semibold uppercase tracking-wider text-navy/40">
-                  Draft · Reply all · 4 To, 13 Cc
-                </p>
-                <p className="mt-2 text-xs leading-relaxed text-navy/70">
-                  Tks for your time sheet. Noted Crane No.4 stopped at 0405 LT on 19
-                  Oct and resumed at 0740 LT, total 3 hrs 35 min. We are checking
-                  this against the agent's SOF and will revert on the off-hire
-                  position.
-                </p>
+              <div className="mt-auto pt-6">
+                <div className="rounded-xl border border-navy/10 bg-cloud p-4">
+                  <p className="font-mono text-[10px] font-semibold uppercase tracking-wider text-navy/40">
+                    Draft · Reply all · 4 To, 13 Cc
+                  </p>
+                  <p className="mt-2 text-xs leading-relaxed text-navy/70">
+                    Tks for your time sheet. Noted Crane No.4 stopped at 0405 LT on 19
+                    Oct and resumed at 0740 LT, total 3 hrs 35 min. We are checking
+                    this against the agent's SOF and will revert on the off-hire
+                    position.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
