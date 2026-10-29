@@ -130,7 +130,7 @@ function OpsAgentPage() {
       {/* One email, start to finish */}
       <section id="walkthrough" className="bg-white px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-[1fr,340px] lg:items-start lg:gap-16">
+          <div className="grid gap-12 lg:grid-cols-[1fr_340px] lg:items-start lg:gap-16">
             <div className="max-w-3xl">
               <Eyebrow>One email, start to finish</Eyebrow>
               <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight md:text-4xl">
