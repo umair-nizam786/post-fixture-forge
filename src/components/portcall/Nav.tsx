@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Logo } from "./Logo";
-import { ComingSoonDialog } from "./ComingSoonDialog";
 
 const personas = [
   { to: "/operators", label: "Operator" },
