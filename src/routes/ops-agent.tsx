@@ -176,7 +176,7 @@ function OpsAgentPage() {
             </h2>
           </div>
           <div className="mt-12 grid gap-6 lg:grid-cols-3">
-            <div className="rounded-2xl border border-navy/10 bg-white p-8">
+            <div className="flex flex-col rounded-2xl border border-navy/10 bg-white p-8">
               <h3 className="text-lg font-bold tracking-tight">
                 Every voyage carries its context.
               </h3>
@@ -186,8 +186,8 @@ function OpsAgentPage() {
                 carries the time charter with your head owners, so it knows which
                 side of the business an email touches.
               </p>
-              <div className="mt-6 flex flex-wrap gap-2">
-                {["Voyage CP", "TC CP", "Fixture recap"].map((c) => (
+              <div className="mt-auto flex flex-wrap gap-2 pt-6">
+                {["Voyage CP", "TC CP", "Fixture recap", "Voyage timeline"].map((c) => (
                   <span
                     key={c}
                     className="rounded-full bg-navy/5 px-3 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-wider text-navy/70"
@@ -197,7 +197,7 @@ function OpsAgentPage() {
                 ))}
               </div>
             </div>
-            <div className="rounded-2xl border border-navy/10 bg-white p-8">
+            <div className="flex flex-col rounded-2xl border border-navy/10 bg-white p-8">
               <h3 className="text-lg font-bold tracking-tight">
                 Discrepancies against the CP, flagged.
               </h3>
@@ -206,7 +206,7 @@ function OpsAgentPage() {
                 doesn't cover, the agent flags it on that email, on the day, while
                 it's still cheap to fix.
               </p>
-              <div className="mt-6 rounded-xl border border-navy/10 bg-cloud p-4">
+              <div className="mt-auto rounded-xl border border-navy/10 bg-cloud p-4 [margin-top:auto] pt-4" style={{ marginTop: "auto" }}>
                 <p className="font-mono text-[10px] font-semibold uppercase tracking-wider text-navy/40">
                   Example · Crane No.4 · 19 Oct
                 </p>
@@ -219,7 +219,7 @@ function OpsAgentPage() {
                 </ul>
               </div>
             </div>
-            <div className="rounded-2xl border border-navy/10 bg-white p-8">
+            <div className="flex flex-col rounded-2xl border border-navy/10 bg-white p-8">
               <h3 className="text-lg font-bold tracking-tight">
                 Your reply, drafted in your words.
               </h3>
@@ -230,7 +230,7 @@ function OpsAgentPage() {
                 the facts from the thread and the charter party position behind it.
                 Read it, change what you like, and send it from Outlook.
               </p>
-              <div className="mt-6 rounded-xl border border-navy/10 bg-cloud p-4">
+              <div className="mt-auto rounded-xl border border-navy/10 bg-cloud p-4 pt-4" style={{ marginTop: "auto" }}>
                 <p className="font-mono text-[10px] font-semibold uppercase tracking-wider text-navy/40">
                   Draft · Reply all · 4 To, 13 Cc
                 </p>
