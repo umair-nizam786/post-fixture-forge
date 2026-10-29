@@ -6,8 +6,9 @@ const schema = z.object({
   name: z.string().trim().min(1).max(100),
   company: z.string().trim().min(1).max(120),
   email: z.string().trim().email().max(255),
-  phone: z.string().trim().min(4).max(40),
+  phone: z.string().trim().max(40).optional().default(''),
   companyType: z.enum(['operator', 'charterer', 'broker']),
+  source: z.string().trim().max(60).optional().default(''),
 })
 
 const NOTIFY_TO = 'umair@portcall.tech'
