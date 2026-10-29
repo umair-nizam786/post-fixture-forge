@@ -2,6 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { z } from "zod";
 import { Layout } from "@/components/portcall/Layout";
+import heroShot from "@/assets/ops-agent-hero.png";
+import panelShot from "@/assets/ops-agent-panel.png";
 
 export const Route = createFileRoute("/ops-agent")({
   head: () => ({
@@ -110,29 +112,52 @@ function OpsAgentPage() {
             contract
           </p>
         </div>
+        <div className="mx-auto mt-14 max-w-5xl">
+          <div className="overflow-hidden rounded-xl border border-white/10 shadow-2xl shadow-navy/50">
+            <img
+              src={heroShot}
+              alt="A voyage email open in Outlook with the Portcall Ops Agent panel beside it, flagging approval needed and drafting the reply"
+              className="block w-full"
+              loading="eager"
+            />
+          </div>
+          <p className="mt-4 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-cloud/40">
+            The Ops Agent panel beside a live voyage email in Outlook
+          </p>
+        </div>
       </section>
 
       {/* One email, start to finish */}
       <section id="walkthrough" className="bg-white px-6 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-3xl">
-            <Eyebrow>One email, start to finish</Eyebrow>
-            <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight md:text-4xl">
-              12:13. The master's time sheet arrives.
-            </h2>
-            <p className="mt-5 text-navy/70">
-              Crane No.4 broke down at Salalah. Two stoppages on the 19th, 0405 to
-              0600 and 0600 to 0740. Four people in To, thirteen in Cc.
-            </p>
-            <p className="mt-4 text-navy/70">
-              Answering it properly means opening the fixture, finding the breakdown
-              clause in the voyage charter party, checking the off-hire clause in the
-              time charter, pulling up the agent's report from yesterday, adding up
-              the hours and deciding who goes on the reply.
-            </p>
-            <p className="mt-4 font-semibold text-navy">
-              The Ops Agent does that work in the pane beside the email.
-            </p>
+          <div className="grid gap-12 lg:grid-cols-[1fr_340px] lg:items-start lg:gap-16">
+            <div className="max-w-3xl">
+              <Eyebrow>One email, start to finish</Eyebrow>
+              <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight md:text-4xl">
+                12:13. The master's time sheet arrives.
+              </h2>
+              <p className="mt-5 text-navy/70">
+                Crane No.4 broke down at Salalah. Two stoppages on the 19th, 0405 to
+                0600 and 0600 to 0740. Four people in To, thirteen in Cc.
+              </p>
+              <p className="mt-4 text-navy/70">
+                Answering it properly means opening the fixture, finding the breakdown
+                clause in the voyage charter party, checking the off-hire clause in the
+                time charter, pulling up the agent's report from yesterday, adding up
+                the hours and deciding who goes on the reply.
+              </p>
+              <p className="mt-4 font-semibold text-navy">
+                The Ops Agent does that work in the pane beside the email.
+              </p>
+            </div>
+            <div className="overflow-hidden rounded-xl border border-navy/10 bg-white shadow-xl shadow-navy/5 lg:sticky lg:top-8">
+              <img
+                src={panelShot}
+                alt="The Portcall Ops Agent panel: approval status, one-line summary, voyage context and the drafted reply"
+                className="block w-full"
+                loading="lazy"
+              />
+            </div>
           </div>
           <div className="mt-12 grid gap-px overflow-hidden rounded-2xl bg-navy/10 md:grid-cols-2 lg:grid-cols-4">
             {[
